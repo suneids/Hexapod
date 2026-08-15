@@ -1,0 +1,16 @@
+../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/../ST/g0/core_cm0plus.h:741:22:__NVIC_EnableIRQ	16	static,ignoring_inline_asm
+../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/../ST/g0/core_cm0plus.h:850:22:__NVIC_SetPriority	24	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/../ST/g0/core_cm0plus.h:1056:26:SysTick_Config	16	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/tim_g0.c:7:17:TIM_GetIndex	16	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/tim_g0.c:16:6:SysTick_Init	16	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/tim_g0.c:26:10:millis	8	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/tim_g0.c:31:6:SysTick_Handler	8	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/tim_g0.c:36:6:SysTick_Delay	24	static,ignoring_inline_asm
+../Inc/HAL_STM32F103C6T6/src/ll/g0/tim_g0.c:45:6:TIM_Init	24	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/tim_g0.c:71:6:TIM_RegisterHandler	24	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/tim_g0.c:79:6:TIM3_IRQHandler	8	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/tim_g0.c:86:10:RCC_GetSysclk_Hz	32	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/tim_g0.c:112:10:RCC_GetHclk_Hz	16	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/tim_g0.c:124:10:RCC_GetPclk1_Hz	16	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/tim_g0.c:138:10:RCC_GetTIMPclk1_Hz	16	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/tim_g0.c:149:10:RCC_GetPclk2_Hz	8	static

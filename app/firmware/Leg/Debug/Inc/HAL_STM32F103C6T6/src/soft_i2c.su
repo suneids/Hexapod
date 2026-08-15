@@ -1,0 +1,7 @@
+../Inc/HAL_STM32F103C6T6/src/soft_i2c.c:2:13:I2C_SET	24	static
+../Inc/HAL_STM32F103C6T6/src/soft_i2c.c:7:13:I2C_RESET	24	static
+../Inc/HAL_STM32F103C6T6/src/soft_i2c.c:12:16:I2C_READ	24	static
+../Inc/HAL_STM32F103C6T6/src/soft_i2c.c:16:6:SoftI2C_Start	48	static
+../Inc/HAL_STM32F103C6T6/src/soft_i2c.c:26:6:SoftI2C_Stop	48	static
+../Inc/HAL_STM32F103C6T6/src/soft_i2c.c:37:9:SoftI2C_Write	56	static
+../Inc/HAL_STM32F103C6T6/src/soft_i2c.c:59:9:SoftI2C_Read	64	static

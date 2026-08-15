@@ -1,0 +1,6 @@
+../Inc/HAL_STM32F103C6T6/src/ll/g0/fdcan.c:42:17:FDCAN_GetRamBase	2
+../Inc/HAL_STM32F103C6T6/src/ll/g0/fdcan.c:56:16:FDCAN_WaitSet	3
+../Inc/HAL_STM32F103C6T6/src/ll/g0/fdcan.c:68:16:FDCAN_WaitClear	3
+../Inc/HAL_STM32F103C6T6/src/ll/g0/fdcan.c:83:9:FDCAN_Init	12
+../Inc/HAL_STM32F103C6T6/src/ll/g0/fdcan.c:260:9:FDCAN_Send	9
+../Inc/HAL_STM32F103C6T6/src/ll/g0/fdcan.c:353:9:FDCAN_Read	10

@@ -1,0 +1,16 @@
+../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/../ST/g0/core_cm0plus.h:741:22:__NVIC_EnableIRQ	2
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:18:6:USART_Init	8
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:78:10:USART_Available	1
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:84:6:USART_WriteByte	2
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:97:6:USART_WriteLine	3
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:112:6:USART_ReadByte	2
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:124:6:USART_ReadBytes	5
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:143:6:echo	2
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:151:9:USART_Index	2
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:158:6:USART_SetHandlers	4
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:166:13:USART_RXHandler_Default	2
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:177:13:USART_TXHandler_Default	1
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:182:6:USART1_IRQHandler	1
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:187:6:USART2_LPUART2_IRQHandler	1
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:192:6:USART_IRQHandler_Shared	10
+../Inc/HAL_STM32F103C6T6/src/ll/g0/usart_g0.c:228:10:USART_BrrCalc	2
