@@ -11,6 +11,7 @@ RM := rm -rf
 -include sources.mk
 -include Startup/subdir.mk
 -include Src/subdir.mk
+-include Inc/HAL_STM32F103C6T6/src/ll/g474/subdir.mk
 -include Inc/HAL_STM32F103C6T6/src/ll/g0/subdir.mk
 -include Inc/HAL_STM32F103C6T6/src/ll/f103/subdir.mk
 -include Inc/HAL_STM32F103C6T6/src/subdir.mk
@@ -65,8 +66,8 @@ all: main-build
 main-build: HexapodLeg.elf secondary-outputs
 
 # Tool invocations
-HexapodLeg.elf HexapodLeg.map: $(OBJS) $(USER_OBJS) D:\Path\Hexapod\app\firmware\src\STM32G0B1CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "HexapodLeg.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"D:\Path\Hexapod\app\firmware\src\STM32G0B1CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HexapodLeg.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+HexapodLeg.elf HexapodLeg.map: $(OBJS) $(USER_OBJS) D:\Path\Hexapod\app\firmware\Leg\STM32G0B1CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "HexapodLeg.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"D:\Path\Hexapod\app\firmware\Leg\STM32G0B1CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HexapodLeg.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

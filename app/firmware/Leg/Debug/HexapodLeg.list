@@ -5,43 +5,43 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .isr_vector   000000bc  08000000  08000000  00001000  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  1 .text         000021c4  080000bc  080000bc  000010bc  2**2
+  1 .text         000021a4  080000bc  080000bc  000010bc  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       000001e4  08002280  08002280  00003280  2**2
+  2 .rodata       000001e4  08002260  08002260  00003260  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  08002464  08002464  00004088  2**0
+  3 .ARM.extab    00000000  08002444  08002444  00004070  2**0
                   CONTENTS, READONLY
-  4 .ARM          00000000  08002464  08002464  00004088  2**0
+  4 .ARM          00000000  08002444  08002444  00004070  2**0
                   CONTENTS, READONLY
-  5 .preinit_array 00000000  08002464  08002464  00004088  2**0
+  5 .preinit_array 00000000  08002444  08002444  00004070  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  08002464  08002464  00003464  2**2
+  6 .init_array   00000004  08002444  08002444  00003444  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  7 .fini_array   00000004  08002468  08002468  00003468  2**2
+  7 .fini_array   00000004  08002448  08002448  00003448  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  8 .data         00000088  20000000  0800246c  00004000  2**2
+  8 .data         00000070  20000000  0800244c  00004000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          00000430  20000088  080024f4  00004088  2**2
+  9 .bss          00000430  20000070  080024bc  00004070  2**2
                   ALLOC
- 10 ._user_heap_stack 00000600  200004b8  080024f4  000044b8  2**0
+ 10 ._user_heap_stack 00000600  200004a0  080024bc  000044a0  2**0
                   ALLOC
- 11 .ARM.attributes 00000028  00000000  00000000  00004088  2**0
+ 11 .ARM.attributes 00000028  00000000  00000000  00004070  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00003099  00000000  00000000  000040b0  2**0
+ 12 .debug_info   00003046  00000000  00000000  00004098  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00000dae  00000000  00000000  00007149  2**0
+ 13 .debug_abbrev 00000da1  00000000  00000000  000070de  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000288  00000000  00000000  00007ef8  2**3
+ 14 .debug_aranges 00000288  00000000  00000000  00007e80  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_rnglists 000001f8  00000000  00000000  00008180  2**0
+ 15 .debug_rnglists 000001f8  00000000  00000000  00008108  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  0000092e  00000000  00000000  00008378  2**0
+ 16 .debug_macro  00000954  00000000  00000000  00008300  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00003a2b  00000000  00000000  00008ca6  2**0
+ 17 .debug_line   00003a5a  00000000  00000000  00008c54  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0006405f  00000000  00000000  0000c6d1  2**0
+ 18 .debug_str    00064081  00000000  00000000  0000c6ae  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  00070730  2**0
+ 19 .comment      00000043  00000000  00000000  0007072f  2**0
                   CONTENTS, READONLY
  20 .debug_frame  000008e4  00000000  00000000  00070774  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -65,9 +65,9 @@ Disassembly of section .text:
  80000d2:	2301      	movs	r3, #1
  80000d4:	7023      	strb	r3, [r4, #0]
  80000d6:	bd10      	pop	{r4, pc}
- 80000d8:	20000088 	.word	0x20000088
+ 80000d8:	20000070 	.word	0x20000070
  80000dc:	00000000 	.word	0x00000000
- 80000e0:	08002268 	.word	0x08002268
+ 80000e0:	08002248 	.word	0x08002248
 
 080000e4 <frame_dummy>:
  80000e4:	4b04      	ldr	r3, [pc, #16]	@ (80000f8 <frame_dummy+0x14>)
@@ -81,8 +81,8 @@ Disassembly of section .text:
  80000f4:	bd10      	pop	{r4, pc}
  80000f6:	46c0      	nop			@ (mov r8, r8)
  80000f8:	00000000 	.word	0x00000000
- 80000fc:	2000008c 	.word	0x2000008c
- 8000100:	08002268 	.word	0x08002268
+ 80000fc:	20000074 	.word	0x20000074
+ 8000100:	08002248 	.word	0x08002248
 
 08000104 <__udivsi3>:
  8000104:	2200      	movs	r2, #0
@@ -1111,8 +1111,8 @@ Disassembly of section .text:
  80008f6:	2001      	movs	r0, #1
  80008f8:	2400      	movs	r4, #0
  80008fa:	e747      	b.n	800078c <__aeabi_fdiv+0xb0>
- 80008fc:	08002280 	.word	0x08002280
- 8000900:	080022c0 	.word	0x080022c0
+ 80008fc:	08002260 	.word	0x08002260
+ 8000900:	080022a0 	.word	0x080022a0
  8000904:	f7ffffff 	.word	0xf7ffffff
 
 08000908 <__eqsf2>:
@@ -2877,11 +2877,11 @@ void PWM_Init(GPIO_Pin_t pin){
  80015f2:	46bd      	mov	sp, r7
  80015f4:	b00a      	add	sp, #40	@ 0x28
  80015f6:	bdb0      	pop	{r4, r5, r7, pc}
- 80015f8:	0800233c 	.word	0x0800233c
- 80015fc:	0800230c 	.word	0x0800230c
- 8001600:	0800231c 	.word	0x0800231c
- 8001604:	0800232c 	.word	0x0800232c
- 8001608:	080022fc 	.word	0x080022fc
+ 80015f8:	0800231c 	.word	0x0800231c
+ 80015fc:	080022ec 	.word	0x080022ec
+ 8001600:	080022fc 	.word	0x080022fc
+ 8001604:	0800230c 	.word	0x0800230c
+ 8001608:	080022dc 	.word	0x080022dc
  800160c:	40012c00 	.word	0x40012c00
 
 08001610 <PWM_Write>:
@@ -3103,7 +3103,7 @@ TimerChannel_t TIM_GetChannel(GPIO_Pin_t pin){
  800177e:	b008      	add	sp, #32
  8001780:	bd80      	pop	{r7, pc}
  8001782:	46c0      	nop			@ (mov r8, r8)
- 8001784:	0800234c 	.word	0x0800234c
+ 8001784:	0800232c 	.word	0x0800232c
 
 08001788 <__NVIC_EnableIRQ>:
   \details Enables a device specific interrupt in the NVIC interrupt controller.
@@ -3383,7 +3383,7 @@ uint32_t millis(void){
  800191e:	46bd      	mov	sp, r7
  8001920:	bd80      	pop	{r7, pc}
  8001922:	46c0      	nop			@ (mov r8, r8)
- 8001924:	200000a4 	.word	0x200000a4
+ 8001924:	2000008c 	.word	0x2000008c
 
 08001928 <SysTick_Handler>:
 
@@ -3401,7 +3401,7 @@ void SysTick_Handler(void){
  8001936:	46c0      	nop			@ (mov r8, r8)
  8001938:	46bd      	mov	sp, r7
  800193a:	bd80      	pop	{r7, pc}
- 800193c:	200000a4 	.word	0x200000a4
+ 800193c:	2000008c 	.word	0x2000008c
 
 08001940 <SysTick_Delay>:
 
@@ -3748,7 +3748,7 @@ uint32_t RCC_GetHclk_Hz(void)
  8001b5c:	b002      	add	sp, #8
  8001b5e:	bd80      	pop	{r7, pc}
  8001b60:	40021000 	.word	0x40021000
- 8001b64:	0800243c 	.word	0x0800243c
+ 8001b64:	0800241c 	.word	0x0800241c
 
 08001b68 <RCC_GetPclk1_Hz>:
 
@@ -3789,7 +3789,7 @@ uint32_t RCC_GetPclk1_Hz(void)
  8001b94:	b002      	add	sp, #8
  8001b96:	bd80      	pop	{r7, pc}
  8001b98:	40021000 	.word	0x40021000
- 8001b9c:	0800245c 	.word	0x0800245c
+ 8001b9c:	0800243c 	.word	0x0800243c
 
 08001ba0 <RCC_GetTIMPclk1_Hz>:
 
@@ -3909,9 +3909,9 @@ static void USART_RXHandler_Default(UART_HandleTypeDef* huart, uint8_t byte){
  8001c52:	b005      	add	sp, #20
  8001c54:	bd90      	pop	{r4, r7, pc}
  8001c56:	46c0      	nop			@ (mov r8, r8)
- 8001c58:	200000a8 	.word	0x200000a8
- 8001c5c:	200000b0 	.word	0x200000b0
- 8001c60:	200000b8 	.word	0x200000b8
+ 8001c58:	20000090 	.word	0x20000090
+ 8001c5c:	20000098 	.word	0x20000098
+ 8001c60:	200000a0 	.word	0x200000a0
 
 08001c64 <USART_TXHandler_Default>:
 
@@ -4151,12 +4151,13 @@ void USART_IRQHandler_Shared(UART_HandleTypeDef *huart){
  8001dce:	b004      	add	sp, #16
  8001dd0:	bd80      	pop	{r7, pc}
  8001dd2:	46c0      	nop			@ (mov r8, r8)
- 8001dd4:	200000b4 	.word	0x200000b4
- 8001dd8:	200000ac 	.word	0x200000ac
- 8001ddc:	200002b8 	.word	0x200002b8
+ 8001dd4:	2000009c 	.word	0x2000009c
+ 8001dd8:	20000094 	.word	0x20000094
+ 8001ddc:	200002a0 	.word	0x200002a0
 
 08001de0 <LEG_Init>:
 #include "activities.h"
+#include "../inc/HAL_STM32F103C6T6/inc/mcu_config.h"
 void LEG_Init(){
  8001de0:	b580      	push	{r7, lr}
  8001de2:	b082      	sub	sp, #8
@@ -4169,7 +4170,7 @@ void LEG_Init(){
  8001df0:	607b      	str	r3, [r7, #4]
 	uint32_t psc = (tim_clk / 1000000u) - 1u;
  8001df2:	687b      	ldr	r3, [r7, #4]
- 8001df4:	4923      	ldr	r1, [pc, #140]	@ (8001e84 <LEG_Init+0xa4>)
+ 8001df4:	491d      	ldr	r1, [pc, #116]	@ (8001e6c <LEG_Init+0x8c>)
  8001df6:	0018      	movs	r0, r3
  8001df8:	f7fe f984 	bl	8000104 <__udivsi3>
  8001dfc:	0003      	movs	r3, r0
@@ -4177,34 +4178,34 @@ void LEG_Init(){
  8001e00:	603b      	str	r3, [r7, #0]
 
 	TIM_Init(TIM2, psc, 19999, 0);
- 8001e02:	4a21      	ldr	r2, [pc, #132]	@ (8001e88 <LEG_Init+0xa8>)
+ 8001e02:	4a1b      	ldr	r2, [pc, #108]	@ (8001e70 <LEG_Init+0x90>)
  8001e04:	6839      	ldr	r1, [r7, #0]
  8001e06:	2380      	movs	r3, #128	@ 0x80
  8001e08:	05d8      	lsls	r0, r3, #23
  8001e0a:	2300      	movs	r3, #0
  8001e0c:	f7ff fdb0 	bl	8001970 <TIM_Init>
 	TIM_Init(TIM1, psc, 19999, 0);
- 8001e10:	4a1d      	ldr	r2, [pc, #116]	@ (8001e88 <LEG_Init+0xa8>)
+ 8001e10:	4a17      	ldr	r2, [pc, #92]	@ (8001e70 <LEG_Init+0x90>)
  8001e12:	6839      	ldr	r1, [r7, #0]
- 8001e14:	481d      	ldr	r0, [pc, #116]	@ (8001e8c <LEG_Init+0xac>)
+ 8001e14:	4817      	ldr	r0, [pc, #92]	@ (8001e74 <LEG_Init+0x94>)
  8001e16:	2300      	movs	r3, #0
  8001e18:	f7ff fdaa 	bl	8001970 <TIM_Init>
 
 
 	PWM_Init(coxa1);
- 8001e1c:	4b1c      	ldr	r3, [pc, #112]	@ (8001e90 <LEG_Init+0xb0>)
+ 8001e1c:	4b16      	ldr	r3, [pc, #88]	@ (8001e78 <LEG_Init+0x98>)
  8001e1e:	6818      	ldr	r0, [r3, #0]
  8001e20:	6859      	ldr	r1, [r3, #4]
  8001e22:	689a      	ldr	r2, [r3, #8]
  8001e24:	f7ff fb4a 	bl	80014bc <PWM_Init>
 	PWM_Init(femur1);
- 8001e28:	4b1a      	ldr	r3, [pc, #104]	@ (8001e94 <LEG_Init+0xb4>)
+ 8001e28:	4b14      	ldr	r3, [pc, #80]	@ (8001e7c <LEG_Init+0x9c>)
  8001e2a:	6818      	ldr	r0, [r3, #0]
  8001e2c:	6859      	ldr	r1, [r3, #4]
  8001e2e:	689a      	ldr	r2, [r3, #8]
  8001e30:	f7ff fb44 	bl	80014bc <PWM_Init>
 	PWM_Init(tibia1);
- 8001e34:	4b18      	ldr	r3, [pc, #96]	@ (8001e98 <LEG_Init+0xb8>)
+ 8001e34:	4b12      	ldr	r3, [pc, #72]	@ (8001e80 <LEG_Init+0xa0>)
  8001e36:	6818      	ldr	r0, [r3, #0]
  8001e38:	6859      	ldr	r1, [r3, #4]
  8001e3a:	689a      	ldr	r2, [r3, #8]
@@ -4212,603 +4213,528 @@ void LEG_Init(){
 
 
 	PWM_Init(coxa2);
- 8001e40:	4b16      	ldr	r3, [pc, #88]	@ (8001e9c <LEG_Init+0xbc>)
+ 8001e40:	4b10      	ldr	r3, [pc, #64]	@ (8001e84 <LEG_Init+0xa4>)
  8001e42:	6818      	ldr	r0, [r3, #0]
  8001e44:	6859      	ldr	r1, [r3, #4]
  8001e46:	689a      	ldr	r2, [r3, #8]
  8001e48:	f7ff fb38 	bl	80014bc <PWM_Init>
 	PWM_Init(femur2);
- 8001e4c:	4b14      	ldr	r3, [pc, #80]	@ (8001ea0 <LEG_Init+0xc0>)
+ 8001e4c:	4b0e      	ldr	r3, [pc, #56]	@ (8001e88 <LEG_Init+0xa8>)
  8001e4e:	6818      	ldr	r0, [r3, #0]
  8001e50:	6859      	ldr	r1, [r3, #4]
  8001e52:	689a      	ldr	r2, [r3, #8]
  8001e54:	f7ff fb32 	bl	80014bc <PWM_Init>
 	PWM_Init(tibia2);
- 8001e58:	4b12      	ldr	r3, [pc, #72]	@ (8001ea4 <LEG_Init+0xc4>)
+ 8001e58:	4b0c      	ldr	r3, [pc, #48]	@ (8001e8c <LEG_Init+0xac>)
  8001e5a:	6818      	ldr	r0, [r3, #0]
  8001e5c:	6859      	ldr	r1, [r3, #4]
  8001e5e:	689a      	ldr	r2, [r3, #8]
  8001e60:	f7ff fb2c 	bl	80014bc <PWM_Init>
 
-	GPIO_PinMode(can_rx);
- 8001e64:	4b10      	ldr	r3, [pc, #64]	@ (8001ea8 <LEG_Init+0xc8>)
- 8001e66:	6818      	ldr	r0, [r3, #0]
- 8001e68:	6859      	ldr	r1, [r3, #4]
- 8001e6a:	689a      	ldr	r2, [r3, #8]
- 8001e6c:	f7ff fa40 	bl	80012f0 <GPIO_PinMode>
-	GPIO_PinMode(can_tx);
- 8001e70:	4b0e      	ldr	r3, [pc, #56]	@ (8001eac <LEG_Init+0xcc>)
- 8001e72:	6818      	ldr	r0, [r3, #0]
- 8001e74:	6859      	ldr	r1, [r3, #4]
- 8001e76:	689a      	ldr	r2, [r3, #8]
- 8001e78:	f7ff fa3a 	bl	80012f0 <GPIO_PinMode>
+	//FDCAN_Init(FDCAN, bitrate)
 }
- 8001e7c:	46c0      	nop			@ (mov r8, r8)
- 8001e7e:	46bd      	mov	sp, r7
- 8001e80:	b002      	add	sp, #8
- 8001e82:	bd80      	pop	{r7, pc}
- 8001e84:	000f4240 	.word	0x000f4240
- 8001e88:	00004e1f 	.word	0x00004e1f
- 8001e8c:	40012c00 	.word	0x40012c00
- 8001e90:	20000040 	.word	0x20000040
- 8001e94:	2000004c 	.word	0x2000004c
- 8001e98:	20000058 	.word	0x20000058
- 8001e9c:	20000064 	.word	0x20000064
- 8001ea0:	20000070 	.word	0x20000070
- 8001ea4:	2000007c 	.word	0x2000007c
- 8001ea8:	20000028 	.word	0x20000028
- 8001eac:	20000034 	.word	0x20000034
+ 8001e64:	46c0      	nop			@ (mov r8, r8)
+ 8001e66:	46bd      	mov	sp, r7
+ 8001e68:	b002      	add	sp, #8
+ 8001e6a:	bd80      	pop	{r7, pc}
+ 8001e6c:	000f4240 	.word	0x000f4240
+ 8001e70:	00004e1f 	.word	0x00004e1f
+ 8001e74:	40012c00 	.word	0x40012c00
+ 8001e78:	20000028 	.word	0x20000028
+ 8001e7c:	20000034 	.word	0x20000034
+ 8001e80:	20000040 	.word	0x20000040
+ 8001e84:	2000004c 	.word	0x2000004c
+ 8001e88:	20000058 	.word	0x20000058
+ 8001e8c:	20000064 	.word	0x20000064
 
-08001eb0 <COXA_SetAngleDeg>:
+08001e90 <COXA_SetAngleDeg>:
 
 
 void COXA_SetAngleDeg(GPIO_Pin_t coxa, float deg){
- 8001eb0:	b590      	push	{r4, r7, lr}
- 8001eb2:	b087      	sub	sp, #28
- 8001eb4:	af00      	add	r7, sp, #0
- 8001eb6:	1d3c      	adds	r4, r7, #4
- 8001eb8:	6020      	str	r0, [r4, #0]
- 8001eba:	6061      	str	r1, [r4, #4]
- 8001ebc:	60a2      	str	r2, [r4, #8]
- 8001ebe:	603b      	str	r3, [r7, #0]
+ 8001e90:	b590      	push	{r4, r7, lr}
+ 8001e92:	b087      	sub	sp, #28
+ 8001e94:	af00      	add	r7, sp, #0
+ 8001e96:	1d3c      	adds	r4, r7, #4
+ 8001e98:	6020      	str	r0, [r4, #0]
+ 8001e9a:	6061      	str	r1, [r4, #4]
+ 8001e9c:	60a2      	str	r2, [r4, #8]
+ 8001e9e:	603b      	str	r3, [r7, #0]
 	uint32_t value = COXA_PWM_MID_US;
- 8001ec0:	4b2b      	ldr	r3, [pc, #172]	@ (8001f70 <COXA_SetAngleDeg+0xc0>)
- 8001ec2:	617b      	str	r3, [r7, #20]
+ 8001ea0:	4b2b      	ldr	r3, [pc, #172]	@ (8001f50 <COXA_SetAngleDeg+0xc0>)
+ 8001ea2:	617b      	str	r3, [r7, #20]
 	deg = deg > 45  ?  45 : deg;
- 8001ec4:	492b      	ldr	r1, [pc, #172]	@ (8001f74 <COXA_SetAngleDeg+0xc4>)
- 8001ec6:	6838      	ldr	r0, [r7, #0]
- 8001ec8:	f7fe f9ce 	bl	8000268 <__aeabi_fcmpgt>
- 8001ecc:	1e03      	subs	r3, r0, #0
- 8001ece:	d001      	beq.n	8001ed4 <COXA_SetAngleDeg+0x24>
- 8001ed0:	4b28      	ldr	r3, [pc, #160]	@ (8001f74 <COXA_SetAngleDeg+0xc4>)
- 8001ed2:	e000      	b.n	8001ed6 <COXA_SetAngleDeg+0x26>
- 8001ed4:	683b      	ldr	r3, [r7, #0]
- 8001ed6:	603b      	str	r3, [r7, #0]
+ 8001ea4:	492b      	ldr	r1, [pc, #172]	@ (8001f54 <COXA_SetAngleDeg+0xc4>)
+ 8001ea6:	6838      	ldr	r0, [r7, #0]
+ 8001ea8:	f7fe f9de 	bl	8000268 <__aeabi_fcmpgt>
+ 8001eac:	1e03      	subs	r3, r0, #0
+ 8001eae:	d001      	beq.n	8001eb4 <COXA_SetAngleDeg+0x24>
+ 8001eb0:	4b28      	ldr	r3, [pc, #160]	@ (8001f54 <COXA_SetAngleDeg+0xc4>)
+ 8001eb2:	e000      	b.n	8001eb6 <COXA_SetAngleDeg+0x26>
+ 8001eb4:	683b      	ldr	r3, [r7, #0]
+ 8001eb6:	603b      	str	r3, [r7, #0]
 	deg = deg < -45 ? -45 : deg;
- 8001ed8:	4927      	ldr	r1, [pc, #156]	@ (8001f78 <COXA_SetAngleDeg+0xc8>)
- 8001eda:	6838      	ldr	r0, [r7, #0]
- 8001edc:	f7fe f9b0 	bl	8000240 <__aeabi_fcmplt>
- 8001ee0:	1e03      	subs	r3, r0, #0
- 8001ee2:	d001      	beq.n	8001ee8 <COXA_SetAngleDeg+0x38>
- 8001ee4:	4b24      	ldr	r3, [pc, #144]	@ (8001f78 <COXA_SetAngleDeg+0xc8>)
- 8001ee6:	e000      	b.n	8001eea <COXA_SetAngleDeg+0x3a>
- 8001ee8:	683b      	ldr	r3, [r7, #0]
- 8001eea:	603b      	str	r3, [r7, #0]
+ 8001eb8:	4927      	ldr	r1, [pc, #156]	@ (8001f58 <COXA_SetAngleDeg+0xc8>)
+ 8001eba:	6838      	ldr	r0, [r7, #0]
+ 8001ebc:	f7fe f9c0 	bl	8000240 <__aeabi_fcmplt>
+ 8001ec0:	1e03      	subs	r3, r0, #0
+ 8001ec2:	d001      	beq.n	8001ec8 <COXA_SetAngleDeg+0x38>
+ 8001ec4:	4b24      	ldr	r3, [pc, #144]	@ (8001f58 <COXA_SetAngleDeg+0xc8>)
+ 8001ec6:	e000      	b.n	8001eca <COXA_SetAngleDeg+0x3a>
+ 8001ec8:	683b      	ldr	r3, [r7, #0]
+ 8001eca:	603b      	str	r3, [r7, #0]
 	if(deg > 0)      value = COXA_PWM_MID_US + deg * (COXA_PWM_FORWARD_US - COXA_PWM_MID_US) / 45;
- 8001eec:	2100      	movs	r1, #0
- 8001eee:	6838      	ldr	r0, [r7, #0]
- 8001ef0:	f7fe f9ba 	bl	8000268 <__aeabi_fcmpgt>
- 8001ef4:	1e03      	subs	r3, r0, #0
- 8001ef6:	d014      	beq.n	8001f22 <COXA_SetAngleDeg+0x72>
- 8001ef8:	4920      	ldr	r1, [pc, #128]	@ (8001f7c <COXA_SetAngleDeg+0xcc>)
- 8001efa:	6838      	ldr	r0, [r7, #0]
- 8001efc:	f7fe fdbc 	bl	8000a78 <__aeabi_fmul>
- 8001f00:	1c03      	adds	r3, r0, #0
- 8001f02:	491c      	ldr	r1, [pc, #112]	@ (8001f74 <COXA_SetAngleDeg+0xc4>)
- 8001f04:	1c18      	adds	r0, r3, #0
- 8001f06:	f7fe fbe9 	bl	80006dc <__aeabi_fdiv>
- 8001f0a:	1c03      	adds	r3, r0, #0
- 8001f0c:	491c      	ldr	r1, [pc, #112]	@ (8001f80 <COXA_SetAngleDeg+0xd0>)
- 8001f0e:	1c18      	adds	r0, r3, #0
- 8001f10:	f7fe f9d6 	bl	80002c0 <__aeabi_fadd>
- 8001f14:	1c03      	adds	r3, r0, #0
- 8001f16:	1c18      	adds	r0, r3, #0
- 8001f18:	f7fe f9ba 	bl	8000290 <__aeabi_f2uiz>
- 8001f1c:	0003      	movs	r3, r0
- 8001f1e:	617b      	str	r3, [r7, #20]
- 8001f20:	e019      	b.n	8001f56 <COXA_SetAngleDeg+0xa6>
+ 8001ecc:	2100      	movs	r1, #0
+ 8001ece:	6838      	ldr	r0, [r7, #0]
+ 8001ed0:	f7fe f9ca 	bl	8000268 <__aeabi_fcmpgt>
+ 8001ed4:	1e03      	subs	r3, r0, #0
+ 8001ed6:	d014      	beq.n	8001f02 <COXA_SetAngleDeg+0x72>
+ 8001ed8:	4920      	ldr	r1, [pc, #128]	@ (8001f5c <COXA_SetAngleDeg+0xcc>)
+ 8001eda:	6838      	ldr	r0, [r7, #0]
+ 8001edc:	f7fe fdcc 	bl	8000a78 <__aeabi_fmul>
+ 8001ee0:	1c03      	adds	r3, r0, #0
+ 8001ee2:	491c      	ldr	r1, [pc, #112]	@ (8001f54 <COXA_SetAngleDeg+0xc4>)
+ 8001ee4:	1c18      	adds	r0, r3, #0
+ 8001ee6:	f7fe fbf9 	bl	80006dc <__aeabi_fdiv>
+ 8001eea:	1c03      	adds	r3, r0, #0
+ 8001eec:	491c      	ldr	r1, [pc, #112]	@ (8001f60 <COXA_SetAngleDeg+0xd0>)
+ 8001eee:	1c18      	adds	r0, r3, #0
+ 8001ef0:	f7fe f9e6 	bl	80002c0 <__aeabi_fadd>
+ 8001ef4:	1c03      	adds	r3, r0, #0
+ 8001ef6:	1c18      	adds	r0, r3, #0
+ 8001ef8:	f7fe f9ca 	bl	8000290 <__aeabi_f2uiz>
+ 8001efc:	0003      	movs	r3, r0
+ 8001efe:	617b      	str	r3, [r7, #20]
+ 8001f00:	e019      	b.n	8001f36 <COXA_SetAngleDeg+0xa6>
 	else if(deg < 0) value = COXA_PWM_MID_US + deg * (COXA_PWM_MID_US - COXA_PWM_BACKWARD_US) / 45; //угол уже отрицательный поэтому не вычитаем
- 8001f22:	2100      	movs	r1, #0
- 8001f24:	6838      	ldr	r0, [r7, #0]
- 8001f26:	f7fe f98b 	bl	8000240 <__aeabi_fcmplt>
- 8001f2a:	1e03      	subs	r3, r0, #0
- 8001f2c:	d013      	beq.n	8001f56 <COXA_SetAngleDeg+0xa6>
- 8001f2e:	4915      	ldr	r1, [pc, #84]	@ (8001f84 <COXA_SetAngleDeg+0xd4>)
- 8001f30:	6838      	ldr	r0, [r7, #0]
- 8001f32:	f7fe fda1 	bl	8000a78 <__aeabi_fmul>
- 8001f36:	1c03      	adds	r3, r0, #0
- 8001f38:	490e      	ldr	r1, [pc, #56]	@ (8001f74 <COXA_SetAngleDeg+0xc4>)
- 8001f3a:	1c18      	adds	r0, r3, #0
- 8001f3c:	f7fe fbce 	bl	80006dc <__aeabi_fdiv>
- 8001f40:	1c03      	adds	r3, r0, #0
- 8001f42:	490f      	ldr	r1, [pc, #60]	@ (8001f80 <COXA_SetAngleDeg+0xd0>)
- 8001f44:	1c18      	adds	r0, r3, #0
- 8001f46:	f7fe f9bb 	bl	80002c0 <__aeabi_fadd>
- 8001f4a:	1c03      	adds	r3, r0, #0
- 8001f4c:	1c18      	adds	r0, r3, #0
- 8001f4e:	f7fe f99f 	bl	8000290 <__aeabi_f2uiz>
- 8001f52:	0003      	movs	r3, r0
- 8001f54:	617b      	str	r3, [r7, #20]
+ 8001f02:	2100      	movs	r1, #0
+ 8001f04:	6838      	ldr	r0, [r7, #0]
+ 8001f06:	f7fe f99b 	bl	8000240 <__aeabi_fcmplt>
+ 8001f0a:	1e03      	subs	r3, r0, #0
+ 8001f0c:	d013      	beq.n	8001f36 <COXA_SetAngleDeg+0xa6>
+ 8001f0e:	4915      	ldr	r1, [pc, #84]	@ (8001f64 <COXA_SetAngleDeg+0xd4>)
+ 8001f10:	6838      	ldr	r0, [r7, #0]
+ 8001f12:	f7fe fdb1 	bl	8000a78 <__aeabi_fmul>
+ 8001f16:	1c03      	adds	r3, r0, #0
+ 8001f18:	490e      	ldr	r1, [pc, #56]	@ (8001f54 <COXA_SetAngleDeg+0xc4>)
+ 8001f1a:	1c18      	adds	r0, r3, #0
+ 8001f1c:	f7fe fbde 	bl	80006dc <__aeabi_fdiv>
+ 8001f20:	1c03      	adds	r3, r0, #0
+ 8001f22:	490f      	ldr	r1, [pc, #60]	@ (8001f60 <COXA_SetAngleDeg+0xd0>)
+ 8001f24:	1c18      	adds	r0, r3, #0
+ 8001f26:	f7fe f9cb 	bl	80002c0 <__aeabi_fadd>
+ 8001f2a:	1c03      	adds	r3, r0, #0
+ 8001f2c:	1c18      	adds	r0, r3, #0
+ 8001f2e:	f7fe f9af 	bl	8000290 <__aeabi_f2uiz>
+ 8001f32:	0003      	movs	r3, r0
+ 8001f34:	617b      	str	r3, [r7, #20]
 
 	PWM_Write(coxa, value);
- 8001f56:	697b      	ldr	r3, [r7, #20]
- 8001f58:	b29b      	uxth	r3, r3
- 8001f5a:	1d3a      	adds	r2, r7, #4
- 8001f5c:	6810      	ldr	r0, [r2, #0]
- 8001f5e:	6851      	ldr	r1, [r2, #4]
- 8001f60:	6892      	ldr	r2, [r2, #8]
- 8001f62:	f7ff fb55 	bl	8001610 <PWM_Write>
+ 8001f36:	697b      	ldr	r3, [r7, #20]
+ 8001f38:	b29b      	uxth	r3, r3
+ 8001f3a:	1d3a      	adds	r2, r7, #4
+ 8001f3c:	6810      	ldr	r0, [r2, #0]
+ 8001f3e:	6851      	ldr	r1, [r2, #4]
+ 8001f40:	6892      	ldr	r2, [r2, #8]
+ 8001f42:	f7ff fb65 	bl	8001610 <PWM_Write>
 }
- 8001f66:	46c0      	nop			@ (mov r8, r8)
- 8001f68:	46bd      	mov	sp, r7
- 8001f6a:	b007      	add	sp, #28
- 8001f6c:	bd90      	pop	{r4, r7, pc}
- 8001f6e:	46c0      	nop			@ (mov r8, r8)
- 8001f70:	000005be 	.word	0x000005be
- 8001f74:	42340000 	.word	0x42340000
- 8001f78:	c2340000 	.word	0xc2340000
- 8001f7c:	c3eb0000 	.word	0xc3eb0000
- 8001f80:	44b7c000 	.word	0x44b7c000
- 8001f84:	c4048000 	.word	0xc4048000
+ 8001f46:	46c0      	nop			@ (mov r8, r8)
+ 8001f48:	46bd      	mov	sp, r7
+ 8001f4a:	b007      	add	sp, #28
+ 8001f4c:	bd90      	pop	{r4, r7, pc}
+ 8001f4e:	46c0      	nop			@ (mov r8, r8)
+ 8001f50:	000005be 	.word	0x000005be
+ 8001f54:	42340000 	.word	0x42340000
+ 8001f58:	c2340000 	.word	0xc2340000
+ 8001f5c:	c3eb0000 	.word	0xc3eb0000
+ 8001f60:	44b7c000 	.word	0x44b7c000
+ 8001f64:	c4048000 	.word	0xc4048000
 
-08001f88 <FEMUR_SetAngleDeg>:
+08001f68 <FEMUR_SetAngleDeg>:
 
 
 void FEMUR_SetAngleDeg(GPIO_Pin_t femur, float deg){
- 8001f88:	b590      	push	{r4, r7, lr}
- 8001f8a:	b087      	sub	sp, #28
- 8001f8c:	af00      	add	r7, sp, #0
- 8001f8e:	1d3c      	adds	r4, r7, #4
- 8001f90:	6020      	str	r0, [r4, #0]
- 8001f92:	6061      	str	r1, [r4, #4]
- 8001f94:	60a2      	str	r2, [r4, #8]
- 8001f96:	603b      	str	r3, [r7, #0]
+ 8001f68:	b590      	push	{r4, r7, lr}
+ 8001f6a:	b087      	sub	sp, #28
+ 8001f6c:	af00      	add	r7, sp, #0
+ 8001f6e:	1d3c      	adds	r4, r7, #4
+ 8001f70:	6020      	str	r0, [r4, #0]
+ 8001f72:	6061      	str	r1, [r4, #4]
+ 8001f74:	60a2      	str	r2, [r4, #8]
+ 8001f76:	603b      	str	r3, [r7, #0]
 	uint32_t value = FEMUR_PWM_MID_US;
- 8001f98:	4b2b      	ldr	r3, [pc, #172]	@ (8002048 <FEMUR_SetAngleDeg+0xc0>)
- 8001f9a:	617b      	str	r3, [r7, #20]
+ 8001f78:	4b2b      	ldr	r3, [pc, #172]	@ (8002028 <FEMUR_SetAngleDeg+0xc0>)
+ 8001f7a:	617b      	str	r3, [r7, #20]
 	deg = deg > 45  ?  45 : deg;
- 8001f9c:	492b      	ldr	r1, [pc, #172]	@ (800204c <FEMUR_SetAngleDeg+0xc4>)
- 8001f9e:	6838      	ldr	r0, [r7, #0]
- 8001fa0:	f7fe f962 	bl	8000268 <__aeabi_fcmpgt>
- 8001fa4:	1e03      	subs	r3, r0, #0
- 8001fa6:	d001      	beq.n	8001fac <FEMUR_SetAngleDeg+0x24>
- 8001fa8:	4b28      	ldr	r3, [pc, #160]	@ (800204c <FEMUR_SetAngleDeg+0xc4>)
- 8001faa:	e000      	b.n	8001fae <FEMUR_SetAngleDeg+0x26>
- 8001fac:	683b      	ldr	r3, [r7, #0]
- 8001fae:	603b      	str	r3, [r7, #0]
+ 8001f7c:	492b      	ldr	r1, [pc, #172]	@ (800202c <FEMUR_SetAngleDeg+0xc4>)
+ 8001f7e:	6838      	ldr	r0, [r7, #0]
+ 8001f80:	f7fe f972 	bl	8000268 <__aeabi_fcmpgt>
+ 8001f84:	1e03      	subs	r3, r0, #0
+ 8001f86:	d001      	beq.n	8001f8c <FEMUR_SetAngleDeg+0x24>
+ 8001f88:	4b28      	ldr	r3, [pc, #160]	@ (800202c <FEMUR_SetAngleDeg+0xc4>)
+ 8001f8a:	e000      	b.n	8001f8e <FEMUR_SetAngleDeg+0x26>
+ 8001f8c:	683b      	ldr	r3, [r7, #0]
+ 8001f8e:	603b      	str	r3, [r7, #0]
 	deg = deg < -45 ? -45 : deg;
- 8001fb0:	4927      	ldr	r1, [pc, #156]	@ (8002050 <FEMUR_SetAngleDeg+0xc8>)
- 8001fb2:	6838      	ldr	r0, [r7, #0]
- 8001fb4:	f7fe f944 	bl	8000240 <__aeabi_fcmplt>
- 8001fb8:	1e03      	subs	r3, r0, #0
- 8001fba:	d001      	beq.n	8001fc0 <FEMUR_SetAngleDeg+0x38>
- 8001fbc:	4b24      	ldr	r3, [pc, #144]	@ (8002050 <FEMUR_SetAngleDeg+0xc8>)
- 8001fbe:	e000      	b.n	8001fc2 <FEMUR_SetAngleDeg+0x3a>
- 8001fc0:	683b      	ldr	r3, [r7, #0]
- 8001fc2:	603b      	str	r3, [r7, #0]
+ 8001f90:	4927      	ldr	r1, [pc, #156]	@ (8002030 <FEMUR_SetAngleDeg+0xc8>)
+ 8001f92:	6838      	ldr	r0, [r7, #0]
+ 8001f94:	f7fe f954 	bl	8000240 <__aeabi_fcmplt>
+ 8001f98:	1e03      	subs	r3, r0, #0
+ 8001f9a:	d001      	beq.n	8001fa0 <FEMUR_SetAngleDeg+0x38>
+ 8001f9c:	4b24      	ldr	r3, [pc, #144]	@ (8002030 <FEMUR_SetAngleDeg+0xc8>)
+ 8001f9e:	e000      	b.n	8001fa2 <FEMUR_SetAngleDeg+0x3a>
+ 8001fa0:	683b      	ldr	r3, [r7, #0]
+ 8001fa2:	603b      	str	r3, [r7, #0]
 	if(deg > 0)      value = FEMUR_PWM_MID_US + deg * (FEMUR_PWM_FORWARD_US - FEMUR_PWM_MID_US) / 45;
- 8001fc4:	2100      	movs	r1, #0
- 8001fc6:	6838      	ldr	r0, [r7, #0]
- 8001fc8:	f7fe f94e 	bl	8000268 <__aeabi_fcmpgt>
- 8001fcc:	1e03      	subs	r3, r0, #0
- 8001fce:	d014      	beq.n	8001ffa <FEMUR_SetAngleDeg+0x72>
- 8001fd0:	4920      	ldr	r1, [pc, #128]	@ (8002054 <FEMUR_SetAngleDeg+0xcc>)
- 8001fd2:	6838      	ldr	r0, [r7, #0]
- 8001fd4:	f7fe fd50 	bl	8000a78 <__aeabi_fmul>
- 8001fd8:	1c03      	adds	r3, r0, #0
- 8001fda:	491c      	ldr	r1, [pc, #112]	@ (800204c <FEMUR_SetAngleDeg+0xc4>)
- 8001fdc:	1c18      	adds	r0, r3, #0
- 8001fde:	f7fe fb7d 	bl	80006dc <__aeabi_fdiv>
- 8001fe2:	1c03      	adds	r3, r0, #0
- 8001fe4:	491c      	ldr	r1, [pc, #112]	@ (8002058 <FEMUR_SetAngleDeg+0xd0>)
- 8001fe6:	1c18      	adds	r0, r3, #0
- 8001fe8:	f7fe f96a 	bl	80002c0 <__aeabi_fadd>
- 8001fec:	1c03      	adds	r3, r0, #0
- 8001fee:	1c18      	adds	r0, r3, #0
- 8001ff0:	f7fe f94e 	bl	8000290 <__aeabi_f2uiz>
- 8001ff4:	0003      	movs	r3, r0
- 8001ff6:	617b      	str	r3, [r7, #20]
- 8001ff8:	e019      	b.n	800202e <FEMUR_SetAngleDeg+0xa6>
+ 8001fa4:	2100      	movs	r1, #0
+ 8001fa6:	6838      	ldr	r0, [r7, #0]
+ 8001fa8:	f7fe f95e 	bl	8000268 <__aeabi_fcmpgt>
+ 8001fac:	1e03      	subs	r3, r0, #0
+ 8001fae:	d014      	beq.n	8001fda <FEMUR_SetAngleDeg+0x72>
+ 8001fb0:	4920      	ldr	r1, [pc, #128]	@ (8002034 <FEMUR_SetAngleDeg+0xcc>)
+ 8001fb2:	6838      	ldr	r0, [r7, #0]
+ 8001fb4:	f7fe fd60 	bl	8000a78 <__aeabi_fmul>
+ 8001fb8:	1c03      	adds	r3, r0, #0
+ 8001fba:	491c      	ldr	r1, [pc, #112]	@ (800202c <FEMUR_SetAngleDeg+0xc4>)
+ 8001fbc:	1c18      	adds	r0, r3, #0
+ 8001fbe:	f7fe fb8d 	bl	80006dc <__aeabi_fdiv>
+ 8001fc2:	1c03      	adds	r3, r0, #0
+ 8001fc4:	491c      	ldr	r1, [pc, #112]	@ (8002038 <FEMUR_SetAngleDeg+0xd0>)
+ 8001fc6:	1c18      	adds	r0, r3, #0
+ 8001fc8:	f7fe f97a 	bl	80002c0 <__aeabi_fadd>
+ 8001fcc:	1c03      	adds	r3, r0, #0
+ 8001fce:	1c18      	adds	r0, r3, #0
+ 8001fd0:	f7fe f95e 	bl	8000290 <__aeabi_f2uiz>
+ 8001fd4:	0003      	movs	r3, r0
+ 8001fd6:	617b      	str	r3, [r7, #20]
+ 8001fd8:	e019      	b.n	800200e <FEMUR_SetAngleDeg+0xa6>
 	else if(deg < 0) value = FEMUR_PWM_MID_US + deg * (FEMUR_PWM_MID_US - FEMUR_PWM_BACKWARD_US) / 45; //угол уже отрицательный поэтому не вычитаем
- 8001ffa:	2100      	movs	r1, #0
- 8001ffc:	6838      	ldr	r0, [r7, #0]
- 8001ffe:	f7fe f91f 	bl	8000240 <__aeabi_fcmplt>
- 8002002:	1e03      	subs	r3, r0, #0
- 8002004:	d013      	beq.n	800202e <FEMUR_SetAngleDeg+0xa6>
- 8002006:	4915      	ldr	r1, [pc, #84]	@ (800205c <FEMUR_SetAngleDeg+0xd4>)
- 8002008:	6838      	ldr	r0, [r7, #0]
- 800200a:	f7fe fd35 	bl	8000a78 <__aeabi_fmul>
- 800200e:	1c03      	adds	r3, r0, #0
- 8002010:	490e      	ldr	r1, [pc, #56]	@ (800204c <FEMUR_SetAngleDeg+0xc4>)
- 8002012:	1c18      	adds	r0, r3, #0
- 8002014:	f7fe fb62 	bl	80006dc <__aeabi_fdiv>
- 8002018:	1c03      	adds	r3, r0, #0
- 800201a:	490f      	ldr	r1, [pc, #60]	@ (8002058 <FEMUR_SetAngleDeg+0xd0>)
- 800201c:	1c18      	adds	r0, r3, #0
- 800201e:	f7fe f94f 	bl	80002c0 <__aeabi_fadd>
- 8002022:	1c03      	adds	r3, r0, #0
- 8002024:	1c18      	adds	r0, r3, #0
- 8002026:	f7fe f933 	bl	8000290 <__aeabi_f2uiz>
- 800202a:	0003      	movs	r3, r0
- 800202c:	617b      	str	r3, [r7, #20]
+ 8001fda:	2100      	movs	r1, #0
+ 8001fdc:	6838      	ldr	r0, [r7, #0]
+ 8001fde:	f7fe f92f 	bl	8000240 <__aeabi_fcmplt>
+ 8001fe2:	1e03      	subs	r3, r0, #0
+ 8001fe4:	d013      	beq.n	800200e <FEMUR_SetAngleDeg+0xa6>
+ 8001fe6:	4915      	ldr	r1, [pc, #84]	@ (800203c <FEMUR_SetAngleDeg+0xd4>)
+ 8001fe8:	6838      	ldr	r0, [r7, #0]
+ 8001fea:	f7fe fd45 	bl	8000a78 <__aeabi_fmul>
+ 8001fee:	1c03      	adds	r3, r0, #0
+ 8001ff0:	490e      	ldr	r1, [pc, #56]	@ (800202c <FEMUR_SetAngleDeg+0xc4>)
+ 8001ff2:	1c18      	adds	r0, r3, #0
+ 8001ff4:	f7fe fb72 	bl	80006dc <__aeabi_fdiv>
+ 8001ff8:	1c03      	adds	r3, r0, #0
+ 8001ffa:	490f      	ldr	r1, [pc, #60]	@ (8002038 <FEMUR_SetAngleDeg+0xd0>)
+ 8001ffc:	1c18      	adds	r0, r3, #0
+ 8001ffe:	f7fe f95f 	bl	80002c0 <__aeabi_fadd>
+ 8002002:	1c03      	adds	r3, r0, #0
+ 8002004:	1c18      	adds	r0, r3, #0
+ 8002006:	f7fe f943 	bl	8000290 <__aeabi_f2uiz>
+ 800200a:	0003      	movs	r3, r0
+ 800200c:	617b      	str	r3, [r7, #20]
 
 	PWM_Write(femur, value);
- 800202e:	697b      	ldr	r3, [r7, #20]
- 8002030:	b29b      	uxth	r3, r3
- 8002032:	1d3a      	adds	r2, r7, #4
- 8002034:	6810      	ldr	r0, [r2, #0]
- 8002036:	6851      	ldr	r1, [r2, #4]
- 8002038:	6892      	ldr	r2, [r2, #8]
- 800203a:	f7ff fae9 	bl	8001610 <PWM_Write>
+ 800200e:	697b      	ldr	r3, [r7, #20]
+ 8002010:	b29b      	uxth	r3, r3
+ 8002012:	1d3a      	adds	r2, r7, #4
+ 8002014:	6810      	ldr	r0, [r2, #0]
+ 8002016:	6851      	ldr	r1, [r2, #4]
+ 8002018:	6892      	ldr	r2, [r2, #8]
+ 800201a:	f7ff faf9 	bl	8001610 <PWM_Write>
 }
- 800203e:	46c0      	nop			@ (mov r8, r8)
- 8002040:	46bd      	mov	sp, r7
- 8002042:	b007      	add	sp, #28
- 8002044:	bd90      	pop	{r4, r7, pc}
- 8002046:	46c0      	nop			@ (mov r8, r8)
- 8002048:	000005be 	.word	0x000005be
- 800204c:	42340000 	.word	0x42340000
- 8002050:	c2340000 	.word	0xc2340000
- 8002054:	c3eb0000 	.word	0xc3eb0000
- 8002058:	44b7c000 	.word	0x44b7c000
- 800205c:	c4048000 	.word	0xc4048000
+ 800201e:	46c0      	nop			@ (mov r8, r8)
+ 8002020:	46bd      	mov	sp, r7
+ 8002022:	b007      	add	sp, #28
+ 8002024:	bd90      	pop	{r4, r7, pc}
+ 8002026:	46c0      	nop			@ (mov r8, r8)
+ 8002028:	000005be 	.word	0x000005be
+ 800202c:	42340000 	.word	0x42340000
+ 8002030:	c2340000 	.word	0xc2340000
+ 8002034:	c3eb0000 	.word	0xc3eb0000
+ 8002038:	44b7c000 	.word	0x44b7c000
+ 800203c:	c4048000 	.word	0xc4048000
 
-08002060 <TIBIA_SetAngleDeg>:
+08002040 <TIBIA_SetAngleDeg>:
 
 void TIBIA_SetAngleDeg(GPIO_Pin_t tibia, float deg){
- 8002060:	b590      	push	{r4, r7, lr}
- 8002062:	b087      	sub	sp, #28
- 8002064:	af00      	add	r7, sp, #0
- 8002066:	1d3c      	adds	r4, r7, #4
- 8002068:	6020      	str	r0, [r4, #0]
- 800206a:	6061      	str	r1, [r4, #4]
- 800206c:	60a2      	str	r2, [r4, #8]
- 800206e:	603b      	str	r3, [r7, #0]
+ 8002040:	b590      	push	{r4, r7, lr}
+ 8002042:	b087      	sub	sp, #28
+ 8002044:	af00      	add	r7, sp, #0
+ 8002046:	1d3c      	adds	r4, r7, #4
+ 8002048:	6020      	str	r0, [r4, #0]
+ 800204a:	6061      	str	r1, [r4, #4]
+ 800204c:	60a2      	str	r2, [r4, #8]
+ 800204e:	603b      	str	r3, [r7, #0]
 	uint32_t value = TIBIA_PWM_MID_US;
- 8002070:	4b2b      	ldr	r3, [pc, #172]	@ (8002120 <TIBIA_SetAngleDeg+0xc0>)
- 8002072:	617b      	str	r3, [r7, #20]
+ 8002050:	4b2b      	ldr	r3, [pc, #172]	@ (8002100 <TIBIA_SetAngleDeg+0xc0>)
+ 8002052:	617b      	str	r3, [r7, #20]
 	deg = deg > 45  ?  45 : deg;
- 8002074:	492b      	ldr	r1, [pc, #172]	@ (8002124 <TIBIA_SetAngleDeg+0xc4>)
- 8002076:	6838      	ldr	r0, [r7, #0]
- 8002078:	f7fe f8f6 	bl	8000268 <__aeabi_fcmpgt>
- 800207c:	1e03      	subs	r3, r0, #0
- 800207e:	d001      	beq.n	8002084 <TIBIA_SetAngleDeg+0x24>
- 8002080:	4b28      	ldr	r3, [pc, #160]	@ (8002124 <TIBIA_SetAngleDeg+0xc4>)
- 8002082:	e000      	b.n	8002086 <TIBIA_SetAngleDeg+0x26>
- 8002084:	683b      	ldr	r3, [r7, #0]
- 8002086:	603b      	str	r3, [r7, #0]
+ 8002054:	492b      	ldr	r1, [pc, #172]	@ (8002104 <TIBIA_SetAngleDeg+0xc4>)
+ 8002056:	6838      	ldr	r0, [r7, #0]
+ 8002058:	f7fe f906 	bl	8000268 <__aeabi_fcmpgt>
+ 800205c:	1e03      	subs	r3, r0, #0
+ 800205e:	d001      	beq.n	8002064 <TIBIA_SetAngleDeg+0x24>
+ 8002060:	4b28      	ldr	r3, [pc, #160]	@ (8002104 <TIBIA_SetAngleDeg+0xc4>)
+ 8002062:	e000      	b.n	8002066 <TIBIA_SetAngleDeg+0x26>
+ 8002064:	683b      	ldr	r3, [r7, #0]
+ 8002066:	603b      	str	r3, [r7, #0]
 	deg = deg < -45 ? -45 : deg;
- 8002088:	4927      	ldr	r1, [pc, #156]	@ (8002128 <TIBIA_SetAngleDeg+0xc8>)
- 800208a:	6838      	ldr	r0, [r7, #0]
- 800208c:	f7fe f8d8 	bl	8000240 <__aeabi_fcmplt>
- 8002090:	1e03      	subs	r3, r0, #0
- 8002092:	d001      	beq.n	8002098 <TIBIA_SetAngleDeg+0x38>
- 8002094:	4b24      	ldr	r3, [pc, #144]	@ (8002128 <TIBIA_SetAngleDeg+0xc8>)
- 8002096:	e000      	b.n	800209a <TIBIA_SetAngleDeg+0x3a>
- 8002098:	683b      	ldr	r3, [r7, #0]
- 800209a:	603b      	str	r3, [r7, #0]
+ 8002068:	4927      	ldr	r1, [pc, #156]	@ (8002108 <TIBIA_SetAngleDeg+0xc8>)
+ 800206a:	6838      	ldr	r0, [r7, #0]
+ 800206c:	f7fe f8e8 	bl	8000240 <__aeabi_fcmplt>
+ 8002070:	1e03      	subs	r3, r0, #0
+ 8002072:	d001      	beq.n	8002078 <TIBIA_SetAngleDeg+0x38>
+ 8002074:	4b24      	ldr	r3, [pc, #144]	@ (8002108 <TIBIA_SetAngleDeg+0xc8>)
+ 8002076:	e000      	b.n	800207a <TIBIA_SetAngleDeg+0x3a>
+ 8002078:	683b      	ldr	r3, [r7, #0]
+ 800207a:	603b      	str	r3, [r7, #0]
 	if(deg > 0)      value = TIBIA_PWM_MID_US + deg * (TIBIA_PWM_FORWARD_US - TIBIA_PWM_MID_US) / 45;
- 800209c:	2100      	movs	r1, #0
- 800209e:	6838      	ldr	r0, [r7, #0]
- 80020a0:	f7fe f8e2 	bl	8000268 <__aeabi_fcmpgt>
- 80020a4:	1e03      	subs	r3, r0, #0
- 80020a6:	d014      	beq.n	80020d2 <TIBIA_SetAngleDeg+0x72>
- 80020a8:	4920      	ldr	r1, [pc, #128]	@ (800212c <TIBIA_SetAngleDeg+0xcc>)
- 80020aa:	6838      	ldr	r0, [r7, #0]
- 80020ac:	f7fe fce4 	bl	8000a78 <__aeabi_fmul>
- 80020b0:	1c03      	adds	r3, r0, #0
- 80020b2:	491c      	ldr	r1, [pc, #112]	@ (8002124 <TIBIA_SetAngleDeg+0xc4>)
- 80020b4:	1c18      	adds	r0, r3, #0
- 80020b6:	f7fe fb11 	bl	80006dc <__aeabi_fdiv>
- 80020ba:	1c03      	adds	r3, r0, #0
- 80020bc:	491c      	ldr	r1, [pc, #112]	@ (8002130 <TIBIA_SetAngleDeg+0xd0>)
- 80020be:	1c18      	adds	r0, r3, #0
- 80020c0:	f7fe f8fe 	bl	80002c0 <__aeabi_fadd>
- 80020c4:	1c03      	adds	r3, r0, #0
- 80020c6:	1c18      	adds	r0, r3, #0
- 80020c8:	f7fe f8e2 	bl	8000290 <__aeabi_f2uiz>
- 80020cc:	0003      	movs	r3, r0
- 80020ce:	617b      	str	r3, [r7, #20]
- 80020d0:	e019      	b.n	8002106 <TIBIA_SetAngleDeg+0xa6>
+ 800207c:	2100      	movs	r1, #0
+ 800207e:	6838      	ldr	r0, [r7, #0]
+ 8002080:	f7fe f8f2 	bl	8000268 <__aeabi_fcmpgt>
+ 8002084:	1e03      	subs	r3, r0, #0
+ 8002086:	d014      	beq.n	80020b2 <TIBIA_SetAngleDeg+0x72>
+ 8002088:	4920      	ldr	r1, [pc, #128]	@ (800210c <TIBIA_SetAngleDeg+0xcc>)
+ 800208a:	6838      	ldr	r0, [r7, #0]
+ 800208c:	f7fe fcf4 	bl	8000a78 <__aeabi_fmul>
+ 8002090:	1c03      	adds	r3, r0, #0
+ 8002092:	491c      	ldr	r1, [pc, #112]	@ (8002104 <TIBIA_SetAngleDeg+0xc4>)
+ 8002094:	1c18      	adds	r0, r3, #0
+ 8002096:	f7fe fb21 	bl	80006dc <__aeabi_fdiv>
+ 800209a:	1c03      	adds	r3, r0, #0
+ 800209c:	491c      	ldr	r1, [pc, #112]	@ (8002110 <TIBIA_SetAngleDeg+0xd0>)
+ 800209e:	1c18      	adds	r0, r3, #0
+ 80020a0:	f7fe f90e 	bl	80002c0 <__aeabi_fadd>
+ 80020a4:	1c03      	adds	r3, r0, #0
+ 80020a6:	1c18      	adds	r0, r3, #0
+ 80020a8:	f7fe f8f2 	bl	8000290 <__aeabi_f2uiz>
+ 80020ac:	0003      	movs	r3, r0
+ 80020ae:	617b      	str	r3, [r7, #20]
+ 80020b0:	e019      	b.n	80020e6 <TIBIA_SetAngleDeg+0xa6>
 	else if(deg < 0) value = TIBIA_PWM_MID_US + deg * (TIBIA_PWM_MID_US - TIBIA_PWM_BACKWARD_US) / 45; //угол уже отрицательный поэтому не вычитаем
- 80020d2:	2100      	movs	r1, #0
- 80020d4:	6838      	ldr	r0, [r7, #0]
- 80020d6:	f7fe f8b3 	bl	8000240 <__aeabi_fcmplt>
- 80020da:	1e03      	subs	r3, r0, #0
- 80020dc:	d013      	beq.n	8002106 <TIBIA_SetAngleDeg+0xa6>
- 80020de:	4915      	ldr	r1, [pc, #84]	@ (8002134 <TIBIA_SetAngleDeg+0xd4>)
- 80020e0:	6838      	ldr	r0, [r7, #0]
- 80020e2:	f7fe fcc9 	bl	8000a78 <__aeabi_fmul>
- 80020e6:	1c03      	adds	r3, r0, #0
- 80020e8:	490e      	ldr	r1, [pc, #56]	@ (8002124 <TIBIA_SetAngleDeg+0xc4>)
- 80020ea:	1c18      	adds	r0, r3, #0
- 80020ec:	f7fe faf6 	bl	80006dc <__aeabi_fdiv>
- 80020f0:	1c03      	adds	r3, r0, #0
- 80020f2:	490f      	ldr	r1, [pc, #60]	@ (8002130 <TIBIA_SetAngleDeg+0xd0>)
- 80020f4:	1c18      	adds	r0, r3, #0
- 80020f6:	f7fe f8e3 	bl	80002c0 <__aeabi_fadd>
- 80020fa:	1c03      	adds	r3, r0, #0
- 80020fc:	1c18      	adds	r0, r3, #0
- 80020fe:	f7fe f8c7 	bl	8000290 <__aeabi_f2uiz>
- 8002102:	0003      	movs	r3, r0
- 8002104:	617b      	str	r3, [r7, #20]
+ 80020b2:	2100      	movs	r1, #0
+ 80020b4:	6838      	ldr	r0, [r7, #0]
+ 80020b6:	f7fe f8c3 	bl	8000240 <__aeabi_fcmplt>
+ 80020ba:	1e03      	subs	r3, r0, #0
+ 80020bc:	d013      	beq.n	80020e6 <TIBIA_SetAngleDeg+0xa6>
+ 80020be:	4915      	ldr	r1, [pc, #84]	@ (8002114 <TIBIA_SetAngleDeg+0xd4>)
+ 80020c0:	6838      	ldr	r0, [r7, #0]
+ 80020c2:	f7fe fcd9 	bl	8000a78 <__aeabi_fmul>
+ 80020c6:	1c03      	adds	r3, r0, #0
+ 80020c8:	490e      	ldr	r1, [pc, #56]	@ (8002104 <TIBIA_SetAngleDeg+0xc4>)
+ 80020ca:	1c18      	adds	r0, r3, #0
+ 80020cc:	f7fe fb06 	bl	80006dc <__aeabi_fdiv>
+ 80020d0:	1c03      	adds	r3, r0, #0
+ 80020d2:	490f      	ldr	r1, [pc, #60]	@ (8002110 <TIBIA_SetAngleDeg+0xd0>)
+ 80020d4:	1c18      	adds	r0, r3, #0
+ 80020d6:	f7fe f8f3 	bl	80002c0 <__aeabi_fadd>
+ 80020da:	1c03      	adds	r3, r0, #0
+ 80020dc:	1c18      	adds	r0, r3, #0
+ 80020de:	f7fe f8d7 	bl	8000290 <__aeabi_f2uiz>
+ 80020e2:	0003      	movs	r3, r0
+ 80020e4:	617b      	str	r3, [r7, #20]
 
 	PWM_Write(tibia, value);
- 8002106:	697b      	ldr	r3, [r7, #20]
- 8002108:	b29b      	uxth	r3, r3
- 800210a:	1d3a      	adds	r2, r7, #4
- 800210c:	6810      	ldr	r0, [r2, #0]
- 800210e:	6851      	ldr	r1, [r2, #4]
- 8002110:	6892      	ldr	r2, [r2, #8]
- 8002112:	f7ff fa7d 	bl	8001610 <PWM_Write>
+ 80020e6:	697b      	ldr	r3, [r7, #20]
+ 80020e8:	b29b      	uxth	r3, r3
+ 80020ea:	1d3a      	adds	r2, r7, #4
+ 80020ec:	6810      	ldr	r0, [r2, #0]
+ 80020ee:	6851      	ldr	r1, [r2, #4]
+ 80020f0:	6892      	ldr	r2, [r2, #8]
+ 80020f2:	f7ff fa8d 	bl	8001610 <PWM_Write>
 }
- 8002116:	46c0      	nop			@ (mov r8, r8)
- 8002118:	46bd      	mov	sp, r7
- 800211a:	b007      	add	sp, #28
- 800211c:	bd90      	pop	{r4, r7, pc}
- 800211e:	46c0      	nop			@ (mov r8, r8)
- 8002120:	000005be 	.word	0x000005be
- 8002124:	42340000 	.word	0x42340000
- 8002128:	c2340000 	.word	0xc2340000
- 800212c:	c3eb0000 	.word	0xc3eb0000
- 8002130:	44b7c000 	.word	0x44b7c000
- 8002134:	c4048000 	.word	0xc4048000
+ 80020f6:	46c0      	nop			@ (mov r8, r8)
+ 80020f8:	46bd      	mov	sp, r7
+ 80020fa:	b007      	add	sp, #28
+ 80020fc:	bd90      	pop	{r4, r7, pc}
+ 80020fe:	46c0      	nop			@ (mov r8, r8)
+ 8002100:	000005be 	.word	0x000005be
+ 8002104:	42340000 	.word	0x42340000
+ 8002108:	c2340000 	.word	0xc2340000
+ 800210c:	c3eb0000 	.word	0xc3eb0000
+ 8002110:	44b7c000 	.word	0x44b7c000
+ 8002114:	c4048000 	.word	0xc4048000
 
-08002138 <SetBase>:
+08002118 <SetBase>:
         if(angle == min_angle) break;
     }
 }
 
 
 void SetBase(){
- 8002138:	b580      	push	{r7, lr}
- 800213a:	af00      	add	r7, sp, #0
+ 8002118:	b580      	push	{r7, lr}
+ 800211a:	af00      	add	r7, sp, #0
     COXA_SetAngleDeg(coxa1, 0);
- 800213c:	2300      	movs	r3, #0
- 800213e:	4a16      	ldr	r2, [pc, #88]	@ (8002198 <SetBase+0x60>)
- 8002140:	6810      	ldr	r0, [r2, #0]
- 8002142:	6851      	ldr	r1, [r2, #4]
- 8002144:	6892      	ldr	r2, [r2, #8]
- 8002146:	f7ff feb3 	bl	8001eb0 <COXA_SetAngleDeg>
+ 800211c:	2300      	movs	r3, #0
+ 800211e:	4a16      	ldr	r2, [pc, #88]	@ (8002178 <SetBase+0x60>)
+ 8002120:	6810      	ldr	r0, [r2, #0]
+ 8002122:	6851      	ldr	r1, [r2, #4]
+ 8002124:	6892      	ldr	r2, [r2, #8]
+ 8002126:	f7ff feb3 	bl	8001e90 <COXA_SetAngleDeg>
     COXA_SetAngleDeg(coxa2, 0);
- 800214a:	2300      	movs	r3, #0
- 800214c:	4a13      	ldr	r2, [pc, #76]	@ (800219c <SetBase+0x64>)
- 800214e:	6810      	ldr	r0, [r2, #0]
- 8002150:	6851      	ldr	r1, [r2, #4]
- 8002152:	6892      	ldr	r2, [r2, #8]
- 8002154:	f7ff feac 	bl	8001eb0 <COXA_SetAngleDeg>
+ 800212a:	2300      	movs	r3, #0
+ 800212c:	4a13      	ldr	r2, [pc, #76]	@ (800217c <SetBase+0x64>)
+ 800212e:	6810      	ldr	r0, [r2, #0]
+ 8002130:	6851      	ldr	r1, [r2, #4]
+ 8002132:	6892      	ldr	r2, [r2, #8]
+ 8002134:	f7ff feac 	bl	8001e90 <COXA_SetAngleDeg>
 
     FEMUR_SetAngleDeg(femur1, 0);
- 8002158:	2300      	movs	r3, #0
- 800215a:	4a11      	ldr	r2, [pc, #68]	@ (80021a0 <SetBase+0x68>)
- 800215c:	6810      	ldr	r0, [r2, #0]
- 800215e:	6851      	ldr	r1, [r2, #4]
- 8002160:	6892      	ldr	r2, [r2, #8]
- 8002162:	f7ff ff11 	bl	8001f88 <FEMUR_SetAngleDeg>
+ 8002138:	2300      	movs	r3, #0
+ 800213a:	4a11      	ldr	r2, [pc, #68]	@ (8002180 <SetBase+0x68>)
+ 800213c:	6810      	ldr	r0, [r2, #0]
+ 800213e:	6851      	ldr	r1, [r2, #4]
+ 8002140:	6892      	ldr	r2, [r2, #8]
+ 8002142:	f7ff ff11 	bl	8001f68 <FEMUR_SetAngleDeg>
     FEMUR_SetAngleDeg(femur2, 0);
- 8002166:	2300      	movs	r3, #0
- 8002168:	4a0e      	ldr	r2, [pc, #56]	@ (80021a4 <SetBase+0x6c>)
- 800216a:	6810      	ldr	r0, [r2, #0]
- 800216c:	6851      	ldr	r1, [r2, #4]
- 800216e:	6892      	ldr	r2, [r2, #8]
- 8002170:	f7ff ff0a 	bl	8001f88 <FEMUR_SetAngleDeg>
+ 8002146:	2300      	movs	r3, #0
+ 8002148:	4a0e      	ldr	r2, [pc, #56]	@ (8002184 <SetBase+0x6c>)
+ 800214a:	6810      	ldr	r0, [r2, #0]
+ 800214c:	6851      	ldr	r1, [r2, #4]
+ 800214e:	6892      	ldr	r2, [r2, #8]
+ 8002150:	f7ff ff0a 	bl	8001f68 <FEMUR_SetAngleDeg>
 
     TIBIA_SetAngleDeg(tibia1, 0);
- 8002174:	2300      	movs	r3, #0
- 8002176:	4a0c      	ldr	r2, [pc, #48]	@ (80021a8 <SetBase+0x70>)
- 8002178:	6810      	ldr	r0, [r2, #0]
- 800217a:	6851      	ldr	r1, [r2, #4]
- 800217c:	6892      	ldr	r2, [r2, #8]
- 800217e:	f7ff ff6f 	bl	8002060 <TIBIA_SetAngleDeg>
+ 8002154:	2300      	movs	r3, #0
+ 8002156:	4a0c      	ldr	r2, [pc, #48]	@ (8002188 <SetBase+0x70>)
+ 8002158:	6810      	ldr	r0, [r2, #0]
+ 800215a:	6851      	ldr	r1, [r2, #4]
+ 800215c:	6892      	ldr	r2, [r2, #8]
+ 800215e:	f7ff ff6f 	bl	8002040 <TIBIA_SetAngleDeg>
     TIBIA_SetAngleDeg(tibia2, 0);
- 8002182:	2300      	movs	r3, #0
- 8002184:	4a09      	ldr	r2, [pc, #36]	@ (80021ac <SetBase+0x74>)
- 8002186:	6810      	ldr	r0, [r2, #0]
- 8002188:	6851      	ldr	r1, [r2, #4]
- 800218a:	6892      	ldr	r2, [r2, #8]
- 800218c:	f7ff ff68 	bl	8002060 <TIBIA_SetAngleDeg>
+ 8002162:	2300      	movs	r3, #0
+ 8002164:	4a09      	ldr	r2, [pc, #36]	@ (800218c <SetBase+0x74>)
+ 8002166:	6810      	ldr	r0, [r2, #0]
+ 8002168:	6851      	ldr	r1, [r2, #4]
+ 800216a:	6892      	ldr	r2, [r2, #8]
+ 800216c:	f7ff ff68 	bl	8002040 <TIBIA_SetAngleDeg>
 }
- 8002190:	46c0      	nop			@ (mov r8, r8)
- 8002192:	46bd      	mov	sp, r7
- 8002194:	bd80      	pop	{r7, pc}
- 8002196:	46c0      	nop			@ (mov r8, r8)
- 8002198:	20000040 	.word	0x20000040
- 800219c:	20000064 	.word	0x20000064
- 80021a0:	2000004c 	.word	0x2000004c
- 80021a4:	20000070 	.word	0x20000070
- 80021a8:	20000058 	.word	0x20000058
- 80021ac:	2000007c 	.word	0x2000007c
+ 8002170:	46c0      	nop			@ (mov r8, r8)
+ 8002172:	46bd      	mov	sp, r7
+ 8002174:	bd80      	pop	{r7, pc}
+ 8002176:	46c0      	nop			@ (mov r8, r8)
+ 8002178:	20000028 	.word	0x20000028
+ 800217c:	2000004c 	.word	0x2000004c
+ 8002180:	20000034 	.word	0x20000034
+ 8002184:	20000058 	.word	0x20000058
+ 8002188:	20000040 	.word	0x20000040
+ 800218c:	20000064 	.word	0x20000064
 
-080021b0 <main>:
+08002190 <main>:
 //REVESION FOR MK1 - 1 MCU for 2 legs
 #include "config.h"
 #include "activities.h"
 
 int main(void)
 {
- 80021b0:	b580      	push	{r7, lr}
- 80021b2:	af00      	add	r7, sp, #0
+ 8002190:	b580      	push	{r7, lr}
+ 8002192:	af00      	add	r7, sp, #0
     LEG_Init();
- 80021b4:	f7ff fe14 	bl	8001de0 <LEG_Init>
+ 8002194:	f7ff fe24 	bl	8001de0 <LEG_Init>
 
     SetBase();
- 80021b8:	f7ff ffbe 	bl	8002138 <SetBase>
+ 8002198:	f7ff ffbe 	bl	8002118 <SetBase>
 
     SysTick_Delay(1000);
- 80021bc:	23fa      	movs	r3, #250	@ 0xfa
- 80021be:	009b      	lsls	r3, r3, #2
- 80021c0:	0018      	movs	r0, r3
- 80021c2:	f7ff fbbd 	bl	8001940 <SysTick_Delay>
+ 800219c:	23fa      	movs	r3, #250	@ 0xfa
+ 800219e:	009b      	lsls	r3, r3, #2
+ 80021a0:	0018      	movs	r0, r3
+ 80021a2:	f7ff fbcd 	bl	8001940 <SysTick_Delay>
 
     while(1)
- 80021c6:	46c0      	nop			@ (mov r8, r8)
- 80021c8:	e7fd      	b.n	80021c6 <main+0x16>
+ 80021a6:	46c0      	nop			@ (mov r8, r8)
+ 80021a8:	e7fd      	b.n	80021a6 <main+0x16>
 	...
 
-080021cc <Reset_Handler>:
+080021ac <Reset_Handler>:
+ 80021ac:	480d      	ldr	r0, [pc, #52]	@ (80021e4 <LoopForever+0x2>)
+ 80021ae:	4685      	mov	sp, r0
+ 80021b0:	f7ff f834 	bl	800121c <SystemInit>
+ 80021b4:	480c      	ldr	r0, [pc, #48]	@ (80021e8 <LoopForever+0x6>)
+ 80021b6:	490d      	ldr	r1, [pc, #52]	@ (80021ec <LoopForever+0xa>)
+ 80021b8:	4a0d      	ldr	r2, [pc, #52]	@ (80021f0 <LoopForever+0xe>)
+ 80021ba:	2300      	movs	r3, #0
+ 80021bc:	e002      	b.n	80021c4 <LoopCopyDataInit>
 
-  .section .text.Reset_Handler
-  .weak Reset_Handler
-  .type Reset_Handler, %function
-Reset_Handler:
-  ldr   r0, =_estack
- 80021cc:	480d      	ldr	r0, [pc, #52]	@ (8002204 <LoopForever+0x2>)
-  mov   sp, r0          /* set stack pointer */
- 80021ce:	4685      	mov	sp, r0
-/* Call the clock system initialization function.*/
-  bl  SystemInit
- 80021d0:	f7ff f824 	bl	800121c <SystemInit>
+080021be <CopyDataInit>:
+ 80021be:	58d4      	ldr	r4, [r2, r3]
+ 80021c0:	50c4      	str	r4, [r0, r3]
+ 80021c2:	3304      	adds	r3, #4
 
-/* Copy the data segment initializers from flash to SRAM */
-  ldr r0, =_sdata
- 80021d4:	480c      	ldr	r0, [pc, #48]	@ (8002208 <LoopForever+0x6>)
-  ldr r1, =_edata
- 80021d6:	490d      	ldr	r1, [pc, #52]	@ (800220c <LoopForever+0xa>)
-  ldr r2, =_sidata
- 80021d8:	4a0d      	ldr	r2, [pc, #52]	@ (8002210 <LoopForever+0xe>)
-  movs r3, #0
- 80021da:	2300      	movs	r3, #0
-  b LoopCopyDataInit
- 80021dc:	e002      	b.n	80021e4 <LoopCopyDataInit>
+080021c4 <LoopCopyDataInit>:
+ 80021c4:	18c4      	adds	r4, r0, r3
+ 80021c6:	428c      	cmp	r4, r1
+ 80021c8:	d3f9      	bcc.n	80021be <CopyDataInit>
+ 80021ca:	4a0a      	ldr	r2, [pc, #40]	@ (80021f4 <LoopForever+0x12>)
+ 80021cc:	4c0a      	ldr	r4, [pc, #40]	@ (80021f8 <LoopForever+0x16>)
+ 80021ce:	2300      	movs	r3, #0
+ 80021d0:	e001      	b.n	80021d6 <LoopFillZerobss>
 
-080021de <CopyDataInit>:
+080021d2 <FillZerobss>:
+ 80021d2:	6013      	str	r3, [r2, #0]
+ 80021d4:	3204      	adds	r2, #4
 
-CopyDataInit:
-  ldr r4, [r2, r3]
- 80021de:	58d4      	ldr	r4, [r2, r3]
-  str r4, [r0, r3]
- 80021e0:	50c4      	str	r4, [r0, r3]
-  adds r3, r3, #4
- 80021e2:	3304      	adds	r3, #4
+080021d6 <LoopFillZerobss>:
+ 80021d6:	42a2      	cmp	r2, r4
+ 80021d8:	d3fb      	bcc.n	80021d2 <FillZerobss>
+ 80021da:	f000 f811 	bl	8002200 <__libc_init_array>
+ 80021de:	f7ff ffd7 	bl	8002190 <main>
 
-080021e4 <LoopCopyDataInit>:
+080021e2 <LoopForever>:
+ 80021e2:	e7fe      	b.n	80021e2 <LoopForever>
+ 80021e4:	20024000 	.word	0x20024000
+ 80021e8:	20000000 	.word	0x20000000
+ 80021ec:	20000070 	.word	0x20000070
+ 80021f0:	0800244c 	.word	0x0800244c
+ 80021f4:	20000070 	.word	0x20000070
+ 80021f8:	200004a0 	.word	0x200004a0
 
-LoopCopyDataInit:
-  adds r4, r0, r3
- 80021e4:	18c4      	adds	r4, r0, r3
-  cmp r4, r1
- 80021e6:	428c      	cmp	r4, r1
-  bcc CopyDataInit
- 80021e8:	d3f9      	bcc.n	80021de <CopyDataInit>
-
-/* Zero fill the bss segment. */
-  ldr r2, =_sbss
- 80021ea:	4a0a      	ldr	r2, [pc, #40]	@ (8002214 <LoopForever+0x12>)
-  ldr r4, =_ebss
- 80021ec:	4c0a      	ldr	r4, [pc, #40]	@ (8002218 <LoopForever+0x16>)
-  movs r3, #0
- 80021ee:	2300      	movs	r3, #0
-  b LoopFillZerobss
- 80021f0:	e001      	b.n	80021f6 <LoopFillZerobss>
-
-080021f2 <FillZerobss>:
-
-FillZerobss:
-  str  r3, [r2]
- 80021f2:	6013      	str	r3, [r2, #0]
-  adds r2, r2, #4
- 80021f4:	3204      	adds	r2, #4
-
-080021f6 <LoopFillZerobss>:
-
-LoopFillZerobss:
-  cmp r2, r4
- 80021f6:	42a2      	cmp	r2, r4
-  bcc FillZerobss
- 80021f8:	d3fb      	bcc.n	80021f2 <FillZerobss>
-
-
-/* Call static constructors */
-  bl __libc_init_array
- 80021fa:	f000 f811 	bl	8002220 <__libc_init_array>
-/* Call the application's entry point.*/
-
-  bl main
- 80021fe:	f7ff ffd7 	bl	80021b0 <main>
-
-08002202 <LoopForever>:
-
-LoopForever:
-  b LoopForever
- 8002202:	e7fe      	b.n	8002202 <LoopForever>
-  ldr   r0, =_estack
- 8002204:	20024000 	.word	0x20024000
-  ldr r0, =_sdata
- 8002208:	20000000 	.word	0x20000000
-  ldr r1, =_edata
- 800220c:	20000088 	.word	0x20000088
-  ldr r2, =_sidata
- 8002210:	0800246c 	.word	0x0800246c
-  ldr r2, =_sbss
- 8002214:	20000088 	.word	0x20000088
-  ldr r4, =_ebss
- 8002218:	200004b8 	.word	0x200004b8
-
-0800221c <ADC_COMP_IRQHandler>:
- * @retval : None
-*/
-  .section .text.Default_Handler,"ax",%progbits
-Default_Handler:
-Infinite_Loop:
-  b Infinite_Loop
- 800221c:	e7fe      	b.n	800221c <ADC_COMP_IRQHandler>
+080021fc <ADC_COMP_IRQHandler>:
+ 80021fc:	e7fe      	b.n	80021fc <ADC_COMP_IRQHandler>
 	...
 
-08002220 <__libc_init_array>:
- 8002220:	b570      	push	{r4, r5, r6, lr}
- 8002222:	2600      	movs	r6, #0
- 8002224:	4c0c      	ldr	r4, [pc, #48]	@ (8002258 <__libc_init_array+0x38>)
- 8002226:	4d0d      	ldr	r5, [pc, #52]	@ (800225c <__libc_init_array+0x3c>)
- 8002228:	1b64      	subs	r4, r4, r5
- 800222a:	10a4      	asrs	r4, r4, #2
- 800222c:	42a6      	cmp	r6, r4
- 800222e:	d109      	bne.n	8002244 <__libc_init_array+0x24>
- 8002230:	2600      	movs	r6, #0
- 8002232:	f000 f819 	bl	8002268 <_init>
- 8002236:	4c0a      	ldr	r4, [pc, #40]	@ (8002260 <__libc_init_array+0x40>)
- 8002238:	4d0a      	ldr	r5, [pc, #40]	@ (8002264 <__libc_init_array+0x44>)
- 800223a:	1b64      	subs	r4, r4, r5
- 800223c:	10a4      	asrs	r4, r4, #2
- 800223e:	42a6      	cmp	r6, r4
- 8002240:	d105      	bne.n	800224e <__libc_init_array+0x2e>
- 8002242:	bd70      	pop	{r4, r5, r6, pc}
- 8002244:	00b3      	lsls	r3, r6, #2
- 8002246:	58eb      	ldr	r3, [r5, r3]
- 8002248:	4798      	blx	r3
- 800224a:	3601      	adds	r6, #1
- 800224c:	e7ee      	b.n	800222c <__libc_init_array+0xc>
- 800224e:	00b3      	lsls	r3, r6, #2
- 8002250:	58eb      	ldr	r3, [r5, r3]
- 8002252:	4798      	blx	r3
- 8002254:	3601      	adds	r6, #1
- 8002256:	e7f2      	b.n	800223e <__libc_init_array+0x1e>
- 8002258:	08002464 	.word	0x08002464
- 800225c:	08002464 	.word	0x08002464
- 8002260:	08002468 	.word	0x08002468
- 8002264:	08002464 	.word	0x08002464
+08002200 <__libc_init_array>:
+ 8002200:	b570      	push	{r4, r5, r6, lr}
+ 8002202:	2600      	movs	r6, #0
+ 8002204:	4c0c      	ldr	r4, [pc, #48]	@ (8002238 <__libc_init_array+0x38>)
+ 8002206:	4d0d      	ldr	r5, [pc, #52]	@ (800223c <__libc_init_array+0x3c>)
+ 8002208:	1b64      	subs	r4, r4, r5
+ 800220a:	10a4      	asrs	r4, r4, #2
+ 800220c:	42a6      	cmp	r6, r4
+ 800220e:	d109      	bne.n	8002224 <__libc_init_array+0x24>
+ 8002210:	2600      	movs	r6, #0
+ 8002212:	f000 f819 	bl	8002248 <_init>
+ 8002216:	4c0a      	ldr	r4, [pc, #40]	@ (8002240 <__libc_init_array+0x40>)
+ 8002218:	4d0a      	ldr	r5, [pc, #40]	@ (8002244 <__libc_init_array+0x44>)
+ 800221a:	1b64      	subs	r4, r4, r5
+ 800221c:	10a4      	asrs	r4, r4, #2
+ 800221e:	42a6      	cmp	r6, r4
+ 8002220:	d105      	bne.n	800222e <__libc_init_array+0x2e>
+ 8002222:	bd70      	pop	{r4, r5, r6, pc}
+ 8002224:	00b3      	lsls	r3, r6, #2
+ 8002226:	58eb      	ldr	r3, [r5, r3]
+ 8002228:	4798      	blx	r3
+ 800222a:	3601      	adds	r6, #1
+ 800222c:	e7ee      	b.n	800220c <__libc_init_array+0xc>
+ 800222e:	00b3      	lsls	r3, r6, #2
+ 8002230:	58eb      	ldr	r3, [r5, r3]
+ 8002232:	4798      	blx	r3
+ 8002234:	3601      	adds	r6, #1
+ 8002236:	e7f2      	b.n	800221e <__libc_init_array+0x1e>
+ 8002238:	08002444 	.word	0x08002444
+ 800223c:	08002444 	.word	0x08002444
+ 8002240:	08002448 	.word	0x08002448
+ 8002244:	08002444 	.word	0x08002444
 
-08002268 <_init>:
- 8002268:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 800226a:	46c0      	nop			@ (mov r8, r8)
- 800226c:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 800226e:	bc08      	pop	{r3}
- 8002270:	469e      	mov	lr, r3
- 8002272:	4770      	bx	lr
+08002248 <_init>:
+ 8002248:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 800224a:	46c0      	nop			@ (mov r8, r8)
+ 800224c:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 800224e:	bc08      	pop	{r3}
+ 8002250:	469e      	mov	lr, r3
+ 8002252:	4770      	bx	lr
 
-08002274 <_fini>:
- 8002274:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8002276:	46c0      	nop			@ (mov r8, r8)
- 8002278:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 800227a:	bc08      	pop	{r3}
- 800227c:	469e      	mov	lr, r3
- 800227e:	4770      	bx	lr
+08002254 <_fini>:
+ 8002254:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 8002256:	46c0      	nop			@ (mov r8, r8)
+ 8002258:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 800225a:	bc08      	pop	{r3}
+ 800225c:	469e      	mov	lr, r3
+ 800225e:	4770      	bx	lr

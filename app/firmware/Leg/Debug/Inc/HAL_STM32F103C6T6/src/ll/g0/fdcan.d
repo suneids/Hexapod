@@ -10,7 +10,8 @@ Inc/HAL_STM32F103C6T6/src/ll/g0/fdcan.o: \
  ../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/../ST/g0/cmsis_gcc.h \
  ../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/../ST/g0/mpu_armv7.h \
  ../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/../ST/g0/system_stm32g0xx.h \
- ../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/tim.h
+ ../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/tim.h \
+ ../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/gpio.h
 ../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/fdcan.h:
 ../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/mcu_config.h:
 ../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/../ST/g0/stm32g0xx.h:
@@ -22,3 +23,4 @@ Inc/HAL_STM32F103C6T6/src/ll/g0/fdcan.o: \
 ../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/../ST/g0/mpu_armv7.h:
 ../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/../ST/g0/system_stm32g0xx.h:
 ../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/tim.h:
+../Inc/HAL_STM32F103C6T6/src/ll/g0/../../../inc/gpio.h:

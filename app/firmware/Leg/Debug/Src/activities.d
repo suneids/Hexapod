@@ -11,7 +11,9 @@ Src/activities.o: ../Src/activities.c ../Src/activities.h ../Src/config.h \
  ../Src/../Inc/HAL_STM32F103C6T6/inc/../ST/g0/system_stm32g0xx.h \
  ../Src/../Inc/HAL_STM32F103C6T6/inc/tim.h \
  ../Src/../Inc/HAL_STM32F103C6T6/inc/gpio.h \
- ../Src/../Inc/HAL_STM32F103C6T6/inc/tim.h
+ ../Src/../Inc/HAL_STM32F103C6T6/inc/tim.h \
+ ../Src/../Inc/HAL_STM32F103C6T6/inc/fdcan.h \
+ ../Src/../inc/HAL_STM32F103C6T6/inc/mcu_config.h
 ../Src/activities.h:
 ../Src/config.h:
 ../Src/../Inc/HAL_STM32F103C6T6/inc/pwm.h:
@@ -27,3 +29,5 @@ Src/activities.o: ../Src/activities.c ../Src/activities.h ../Src/config.h \
 ../Src/../Inc/HAL_STM32F103C6T6/inc/tim.h:
 ../Src/../Inc/HAL_STM32F103C6T6/inc/gpio.h:
 ../Src/../Inc/HAL_STM32F103C6T6/inc/tim.h:
+../Src/../Inc/HAL_STM32F103C6T6/inc/fdcan.h:
+../Src/../inc/HAL_STM32F103C6T6/inc/mcu_config.h:

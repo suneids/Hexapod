@@ -1,4 +1,5 @@
 #include "activities.h"
+#include "../inc/HAL_STM32F103C6T6/inc/mcu_config.h"
 void LEG_Init(){
 	SysTick_Init();
 	uint32_t tim_clk = RCC_GetTIMPclk1_Hz();
@@ -17,7 +18,7 @@ void LEG_Init(){
 	PWM_Init(femur2);
 	PWM_Init(tibia2);
 
-	FDCAN_Init(FDCANx, bitrate)
+	//FDCAN_Init(FDCAN, bitrate)
 }
 
 
