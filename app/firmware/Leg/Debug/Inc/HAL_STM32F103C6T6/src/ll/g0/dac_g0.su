@@ -1,3 +1,0 @@
-../Inc/HAL_STM32F103C6T6/src/ll/g0/dac_g0.c:5:6:DAC_Init	8	static
-../Inc/HAL_STM32F103C6T6/src/ll/g0/dac_g0.c:36:6:DAC_Write	16	static
-../Inc/HAL_STM32F103C6T6/src/ll/g0/dac_g0.c:48:6:DAC_WriteDual	16	static

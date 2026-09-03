@@ -12,6 +12,8 @@ int main(void)
 
     while(1)
     {
+    	Leg_CAN_Update();
+    	Leg_Motion_Update();
 //    	SetBase();
 //        Таз
 //        SweepJoint(COXA_SetAngleDeg, coxa1, -45, 45, 1, 20);

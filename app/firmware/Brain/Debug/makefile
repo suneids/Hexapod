@@ -11,6 +11,14 @@ RM := rm -rf
 -include sources.mk
 -include Startup/subdir.mk
 -include Src/subdir.mk
+-include Inc/HAL_STM32F103C6T6/src/ll/g474/subdir.mk
+-include Inc/HAL_STM32F103C6T6/src/ll/g0/subdir.mk
+-include Inc/HAL_STM32F103C6T6/src/ll/f103/subdir.mk
+-include Inc/HAL_STM32F103C6T6/src/subdir.mk
+-include Inc/HAL_STM32F103C6T6/ST/g474/subdir.mk
+-include Inc/HAL_STM32F103C6T6/ST/g0/subdir.mk
+-include Inc/HAL_STM32F103C6T6/ST/f103/subdir.mk
+-include Inc/HAL_STM32F103C6T6/Midleware/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
