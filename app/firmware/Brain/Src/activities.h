@@ -1,8 +1,10 @@
 #include "config.h"
+#include "control.h"
 #ifndef ACTIVITIES_H
 #define ACTIVITIES_H
 void LEG_SetAngles(uint8_t leg, int16_t coxa, int16_t femur, int16_t tibia);
 void BRAIN_Init();
+void BRAIN_SendCurrentState(void);
 void SPIDER_StepBase();
 void SPIDER_StepForward();
 void SPIDER_StepBackward();
@@ -11,6 +13,8 @@ void SPIDER_StepRight();
 void SPIDER_GaitUpdate(void);
 void Control_Update(void);
 
+bool LEG_IK(float x, float y, float z, LegAngles_t *a);
+bool LEG_SetPosition(uint8_t leg, float x, float y, float z);
 //LegAngles_t Leg_IK(float x, float y, float z);
 
 #endif

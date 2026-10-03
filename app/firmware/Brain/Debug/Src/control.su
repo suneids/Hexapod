@@ -1,0 +1,7 @@
+../Src/control.c:33:17:crc16	24	static
+../Src/control.c:52:17:CRC16_Update	24	static
+../Src/control.c:70:13:Control_ResetParser	4	static
+../Src/control.c:84:13:Control_ProcessPacket	8	static
+../Src/control.c:106:13:Control_ParseByte	16	static
+../Src/control.c:173:6:Control_Update	16	static
+../Src/control.c:230:6:Control_SendCurrentState	48	static

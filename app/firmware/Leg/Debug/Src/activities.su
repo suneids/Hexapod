@@ -1,0 +1,11 @@
+../Src/activities.c:9:16:UnpackInt16	24	static
+../Src/activities.c:15:16:LegPacketChecksum	24	static
+../Src/activities.c:24:6:LEG_Init	16	static
+../Src/activities.c:46:6:Leg_CAN_Update	48	static
+../Src/activities.c:93:14:MoveTowards	24	static
+../Src/activities.c:110:6:Leg_Motion_Update	8	static
+../Src/activities.c:139:6:COXA_SetAngleDeg	40	static
+../Src/activities.c:150:6:FEMUR_SetAngleDeg	40	static
+../Src/activities.c:161:6:TIBIA_SetAngleDeg	40	static
+../Src/activities.c:172:13:SweepJoint	40	static
+../Src/activities.c:198:6:SetBase	8	static

@@ -1,0 +1,2 @@
+../Inc/HAL_STM32F103C6T6/ST/g474/system_stm32g4xx.c:181:6:SystemInit	4	static
+../Inc/HAL_STM32F103C6T6/ST/g474/system_stm32g4xx.c:230:6:SystemCoreClockUpdate	32	static

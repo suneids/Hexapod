@@ -1,14 +1,8 @@
 #include "control.h"
 #include "activities.h"
-
+#include <string.h>
 #include "HAL_STM32F103C6T6/inc/usart.h"
 #include "HAL_STM32F103C6T6/inc/tim.h"
-
-
-#define CONTROL_USART           USART2
-#define CONTROL_MAX_PAYLOAD     16u
-#define CONTROL_TIMEOUT_MS      200u
-
 
 typedef enum{
 	RX_WAIT_AA = 0,
@@ -35,6 +29,24 @@ static uint16_t received_crc = 0u;
 
 static uint8_t move_command = MOVE_NONE;
 static uint32_t last_command_time = 0u;
+
+static uint16_t crc16(const uint8_t *data, uint16_t len){
+    uint16_t crc = 0xFFFF;
+
+    for(uint16_t i = 0; i < len; i++) {
+        crc ^= data[i];
+
+        for(uint8_t j = 0; j < 8; j++) {
+            if(crc & 1) {
+                crc = (crc >> 1) ^ 0xA001;
+            } else {
+                crc >>= 1;
+            }
+        }
+    }
+
+    return crc;
+}
 
 
 static uint16_t CRC16_Update(uint16_t crc, uint8_t data){
@@ -71,7 +83,7 @@ static void Control_ResetParser(void){
 
 static void Control_ProcessPacket(void){
 
-	if(rx_id != DEVICE_SPIDER){
+	if(rx_id != DEVICE_HEXAPOD){
 		return;
 	}
 
@@ -212,4 +224,32 @@ void Control_Update(void){
 		default:
 			break;
 	}
+}
+
+
+void Control_SendCurrentState(const int8_t *data, size_t count){
+    uint8_t packet[2 + 1 + 1 + 1 + SPIDER_STATE_COUNT + 2];
+
+    if(count != SPIDER_STATE_COUNT){
+        return;
+    }
+
+    size_t idx = 0;
+
+    packet[idx++] = PKT_SOF1;
+    packet[idx++] = PKT_SOF2;
+    packet[idx++] = DEVICE_HEXAPOD;
+    packet[idx++] = CMD_STATE;
+
+    packet[idx++] = (uint8_t)count;
+
+    memcpy(&packet[idx], data, count);
+    idx += count;
+
+    uint16_t crc = crc16(&packet[2], idx - 2);
+
+    packet[idx++] = (uint8_t)crc;
+    packet[idx++] = (uint8_t)(crc >> 8);
+
+    USART_WriteLine(CONTROL_USART, (const char*)packet, idx);
 }

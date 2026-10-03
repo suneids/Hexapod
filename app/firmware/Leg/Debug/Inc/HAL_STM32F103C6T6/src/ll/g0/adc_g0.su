@@ -1,0 +1,5 @@
+../Inc/HAL_STM32F103C6T6/src/ll/g0/adc_g0.c:5:9:getChannelNumber	24	static
+../Inc/HAL_STM32F103C6T6/src/ll/g0/adc_g0.c:13:13:ADC_WaitReady	8	static,ignoring_inline_asm
+../Inc/HAL_STM32F103C6T6/src/ll/g0/adc_g0.c:18:13:ADC_DisableIfEnabled	8	static,ignoring_inline_asm
+../Inc/HAL_STM32F103C6T6/src/ll/g0/adc_g0.c:26:6:ADC_InitMulti	40	static,ignoring_inline_asm
+../Inc/HAL_STM32F103C6T6/src/ll/g0/adc_g0.c:91:6:ADC_Start	8	static

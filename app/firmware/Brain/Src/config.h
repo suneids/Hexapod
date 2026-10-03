@@ -2,22 +2,39 @@
 #include "HAL_STM32F103C6T6/inc/tim.h"
 #include "HAL_STM32F103C6T6/inc/usart.h"
 #include <stdint.h>
+#include <math.h>
+#include <stdbool.h>
 
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#define COXA_CENTER     0
 
-#define COXA_FORWARD   25
-#define COXA_BACKWARD -25
+#define COXA_MIN       -45
+#define COXA_MAX        45
 
-#define FEMUR_GROUND    60
-#define TIBIA_GROUND    30
+#define COXA_FORWARD    25
+#define COXA_BACKWARD  -25
 
-#define FEMUR_LIFT     45
-#define TIBIA_LIFT     30
+#define FEMUR_MIN      -90
+#define FEMUR_MAX       90
+
+#define TIBIA_MIN      -90
+#define TIBIA_MAX       90
 
 #define GAIT_PHASE_TIME 250
+
+#define GAIT_UPDATE_TIME 30u
+#define STEP_HALF          45.0f   // стопа ходит от -35 до +35 мм
+#define STEP_HEIGHT        35.0f   // подъём стопы
+#define GAIT_HALF_TIME     500u    // мс на половину цикла
+#define LEG_WORK_RADIUS    100.0f
+#define LEG_GROUND_Z       217.94f
+#define L_COXA   55.0f
+#define L_FEMUR  90.0f
+#define L_TIBIA 140.0f
+#define RAD_TO_DEG 57.2957795f
+
+
 
 #define CMD_MOVE       0x10u
 
@@ -31,6 +48,13 @@
 
 
 
+typedef struct {
+    float coxa;
+    float femur;
+    float tibia;
+} LegAngles_t;
+
+
 
 typedef struct{
     uint8_t move;
@@ -42,6 +66,21 @@ typedef struct{
     float vy;
     float wz;
 } BodyVelocity_t;
+
+
+typedef struct{
+    float x;
+    float y;
+    float z;
+} LegTransform_t;
+
+
+typedef enum{
+    GAIT_IDLE = 0,
+    GAIT_A_SWING,
+    GAIT_B_SWING
+} GaitState_t;
+
 
 typedef struct {
     int16_t coxa;
@@ -61,25 +100,14 @@ typedef enum{
 	LEG_RR = 4    // right rear
 } LegID_t;
 
-typedef enum{
-	GAIT_IDLE = 0,
-
-	GAIT_FORWARD_A_LIFT,
-	GAIT_FORWARD_A_SWING,
-	GAIT_FORWARD_A_DOWN,
-
-	GAIT_FORWARD_B_LIFT,
-	GAIT_FORWARD_B_SWING,
-	GAIT_FORWARD_B_DOWN,
-
-	GAIT_FORWARD_PUSH
-
-} GaitState_t;
 
 extern const uint8_t tripod_A[3];
 extern const uint8_t tripod_B[3];
 extern const int8_t coxa_sign[6];
 
+extern const LegTransform_t home;
+extern LegTransform_t leg_pos[6];
+extern LegAngles_t leg_angles[6];
 extern GPIO_Pin_t brain_led;
 
 #endif

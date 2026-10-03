@@ -1,0 +1,12 @@
+../Inc/HAL_STM32F103C6T6/src/ll/g474/flash_ll_g474.c:21:12:flash_wait_ready	4
+../Inc/HAL_STM32F103C6T6/src/ll/g474/flash_ll_g474.c:42:17:flash_get_size	3
+../Inc/HAL_STM32F103C6T6/src/ll/g474/flash_ll_g474.c:54:13:flash_clear_flags	1
+../Inc/HAL_STM32F103C6T6/src/ll/g474/flash_ll_g474.c:66:5:flash_ll_unlock	3
+../Inc/HAL_STM32F103C6T6/src/ll/g474/flash_ll_g474.c:82:5:flash_ll_lock	3
+../Inc/HAL_STM32F103C6T6/src/ll/g474/flash_ll_g474.c:92:16:flash_disable_dcache	2
+../Inc/HAL_STM32F103C6T6/src/ll/g474/flash_ll_g474.c:104:13:flash_restore_dcache	2
+../Inc/HAL_STM32F103C6T6/src/ll/g474/flash_ll_g474.c:117:13:flash_flush_icache	2
+../Inc/HAL_STM32F103C6T6/src/ll/g474/flash_ll_g474.c:132:5:flash_ll_erase_page	11
+../Inc/HAL_STM32F103C6T6/src/ll/g474/flash_ll_g474.c:255:5:flash_ll_program_doubleword	9
+../Inc/HAL_STM32F103C6T6/src/ll/g474/flash_ll_g474.c:333:5:flash_ll_read_doubleword	6
+../Inc/HAL_STM32F103C6T6/src/ll/g474/flash_ll_g474.c:368:5:flash_ll_read_halfword	6

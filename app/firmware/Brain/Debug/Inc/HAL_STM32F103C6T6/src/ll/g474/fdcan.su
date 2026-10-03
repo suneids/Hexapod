@@ -1,0 +1,8 @@
+../Inc/HAL_STM32F103C6T6/src/ll/g474/fdcan.c:42:16:FDCAN_PinInit	112	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/fdcan.c:124:17:FDCAN_GetRamBase	24	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/fdcan.c:139:16:FDCAN_WaitSet	24	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/fdcan.c:151:16:FDCAN_WaitClear	24	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/fdcan.c:163:16:FDCAN_IsValid	16	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/fdcan.c:174:9:FDCAN_Init	40	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/fdcan.c:353:9:FDCAN_Send	56	static,ignoring_inline_asm
+../Inc/HAL_STM32F103C6T6/src/ll/g474/fdcan.c:409:9:FDCAN_Read	64	static

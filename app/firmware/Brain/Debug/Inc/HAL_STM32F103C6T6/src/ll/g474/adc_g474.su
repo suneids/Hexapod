@@ -1,0 +1,7 @@
+../Inc/HAL_STM32F103C6T6/src/ll/g474/adc_g474.c:6:16:ADC_GetChannelNumber	24	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/adc_g474.c:38:13:ADC_WaitReady	4	static,ignoring_inline_asm
+../Inc/HAL_STM32F103C6T6/src/ll/g474/adc_g474.c:43:13:ADC_DisableIfEnabled	4	static,ignoring_inline_asm
+../Inc/HAL_STM32F103C6T6/src/ll/g474/adc_g474.c:57:13:ADC_SetSamplingTime	24	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/adc_g474.c:76:13:ADC_SetRank	24	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/adc_g474.c:110:6:ADC_InitMulti	32	static,ignoring_inline_asm
+../Inc/HAL_STM32F103C6T6/src/ll/g474/adc_g474.c:240:6:ADC_Start	4	static

@@ -1,0 +1,10 @@
+../Inc/HAL_STM32F103C6T6/src/ll/g474/dma_g474.c:10:21:DMA_GetController	16	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/dma_g474.c:40:16:DMA_GetChannelIndex	16	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/dma_g474.c:55:16:DMA_GetDMAMUXIndex	24	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/dma_g474.c:73:13:DMA_SetRequest	24	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/dma_g474.c:90:13:DMA_ClearFlags	24	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/dma_g474.c:101:6:DMA_Init	32	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/dma_g474.c:158:6:SPI1_DMA_TX_Init	4	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/dma_g474.c:164:6:SPI1_DMA_TX_Start	16	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/dma_g474.c:169:6:SPI1_DMA_TX_Stop	4	static
+../Inc/HAL_STM32F103C6T6/src/ll/g474/dma_g474.c:174:9:DMA_IsReady	32	static

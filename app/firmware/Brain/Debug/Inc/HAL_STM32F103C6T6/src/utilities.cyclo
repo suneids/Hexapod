@@ -1,0 +1,2 @@
+../Inc/HAL_STM32F103C6T6/src/utilities.c:4:6:HAL_assert	2
+../Inc/HAL_STM32F103C6T6/src/utilities.c:10:6:HAL_assertFailed	2

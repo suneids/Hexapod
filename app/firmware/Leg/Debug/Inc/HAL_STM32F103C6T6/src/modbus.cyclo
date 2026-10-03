@@ -1,0 +1,16 @@
+../Inc/HAL_STM32F103C6T6/src/../inc/../ST/g0/core_cm0plus.h:741:22:__NVIC_EnableIRQ	2
+../Inc/HAL_STM32F103C6T6/src/modbus.c:22:9:MODBUS_IsBusy	3
+../Inc/HAL_STM32F103C6T6/src/modbus.c:27:13:NV_MarkDirty	2
+../Inc/HAL_STM32F103C6T6/src/modbus.c:35:23:TimeReached	1
+../Inc/HAL_STM32F103C6T6/src/modbus.c:40:9:NV_CommitTimerDue	4
+../Inc/HAL_STM32F103C6T6/src/modbus.c:48:6:MODBUS_Init	2
+../Inc/HAL_STM32F103C6T6/src/modbus.c:62:13:ReconfigureUARTCFG	5
+../Inc/HAL_STM32F103C6T6/src/modbus.c:95:13:MODBUS_RxCallback	5
+../Inc/HAL_STM32F103C6T6/src/modbus.c:121:13:MODBUS_TxCallback	2
+../Inc/HAL_STM32F103C6T6/src/modbus.c:130:13:MODBUS_Timer_IRQHandler	2
+../Inc/HAL_STM32F103C6T6/src/modbus.c:145:6:MODBUS_Process	13
+../Inc/HAL_STM32F103C6T6/src/modbus.c:195:13:MODBUS_HandleReadHoldingRegisters	9
+../Inc/HAL_STM32F103C6T6/src/modbus.c:244:13:MODBUS_HandleWriteSingleRegister	13
+../Inc/HAL_STM32F103C6T6/src/modbus.c:294:13:MODBUS_HandleWriteMultipleRegisters	24
+../Inc/HAL_STM32F103C6T6/src/modbus.c:370:13:MODBUS_SendException	1
+../Inc/HAL_STM32F103C6T6/src/modbus.c:382:10:MODBUS_CRC16	4

@@ -16,6 +16,7 @@ const uint8_t tripod_B[3] = {
 const int8_t coxa_sign[6] = {
 		1, 1, 1, -1, -1, -1
 };
+
 GPIO_Pin_t brain_led = {
 		.port  = GPIOC,
 		.number = 6,
@@ -25,3 +26,6 @@ GPIO_Pin_t brain_led = {
 		.speed = GPIO_SPEED_LOW,
 		.af    = 0
 	};
+const LegTransform_t home = {.x = 100, .y = 0, .z = 217.94 };
+LegTransform_t leg_pos[6] = {0};
+LegAngles_t leg_angles[6] = {0};

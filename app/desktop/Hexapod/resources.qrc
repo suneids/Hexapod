@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/icon.png</file>
+        <file>HexapodView.qml</file>
+        <file>models/qt/Hexapod.qml</file>
+        <file>models/qt/meshes/coxa_LF.mesh</file>
+        <file>models/qt/meshes/coxa_LM.mesh</file>
+        <file>models/qt/meshes/coxa_LR.mesh</file>
+        <file>models/qt/meshes/coxa_RF.mesh</file>
+        <file>models/qt/meshes/coxa_RM.mesh</file>
+        <file>models/qt/meshes/coxa_RR.mesh</file>
+        <file>models/qt/meshes/femur_LF.mesh</file>
+        <file>models/qt/meshes/femur_LM.mesh</file>
+        <file>models/qt/meshes/femur_LR.mesh</file>
+        <file>models/qt/meshes/femur_RF.mesh</file>
+        <file>models/qt/meshes/femur_RM.mesh</file>
+        <file>models/qt/meshes/femur_RR.mesh</file>
+        <file>models/qt/meshes/leg_LF.mesh</file>
+        <file>models/qt/meshes/leg_LM.mesh</file>
+        <file>models/qt/meshes/leg_LR.mesh</file>
+        <file>models/qt/meshes/leg_RF.mesh</file>
+        <file>models/qt/meshes/leg_RM.mesh</file>
+        <file>models/qt/meshes/leg_RR.mesh</file>
+        <file>models/qt/meshes/tibia_LF.mesh</file>
+        <file>models/qt/meshes/tibia_LM.mesh</file>
+        <file>models/qt/meshes/tibia_LR.mesh</file>
+        <file>models/qt/meshes/tibia_RF.mesh</file>
+        <file>models/qt/meshes/tibia_RM.mesh</file>
+        <file>models/qt/meshes/tibia_RR.mesh</file>
+        <file>models/qt/meshes/frame1.mesh</file>
+        <file>models/qt/meshes/frame1_001.mesh</file>
+        <file>models/qt/meshes/frame1_002.mesh</file>
+        <file>models/qt/meshes/frame1_003.mesh</file>
+        <file>models/qt/meshes/frame1_004.mesh</file>
+        <file>models/qt/meshes/frame1_005.mesh</file>
+        <file>models/qt/meshes/frame1_006.mesh</file>
+        <file>models/qt/meshes/frame1_007.mesh</file>
+        <file>models/qt/meshes/stick1.mesh</file>
+        <file>models/qt/meshes/stick1_001.mesh</file>
+        <file>models/qt/meshes/stick1_002.mesh</file>
+        <file>models/qt/meshes/stick1_003.mesh</file>
+        <file>models/qt/meshes/stick1_004.mesh</file>
+        <file>models/qt/meshes/stick1_005.mesh</file>
+    </qresource>
+</RCC>

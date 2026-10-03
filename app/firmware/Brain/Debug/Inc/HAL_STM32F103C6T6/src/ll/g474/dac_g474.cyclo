@@ -1,0 +1,3 @@
+../Inc/HAL_STM32F103C6T6/src/ll/g474/dac_g474.c:6:6:DAC_Init	3
+../Inc/HAL_STM32F103C6T6/src/ll/g474/dac_g474.c:50:6:DAC_Write	4
+../Inc/HAL_STM32F103C6T6/src/ll/g474/dac_g474.c:63:6:DAC_WriteDual	3

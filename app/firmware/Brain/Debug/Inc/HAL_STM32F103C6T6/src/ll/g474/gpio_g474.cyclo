@@ -1,0 +1,7 @@
+../Inc/HAL_STM32F103C6T6/src/ll/g474/gpio_g474.c:5:13:GPIO_ClockEnable	13
+../Inc/HAL_STM32F103C6T6/src/ll/g474/gpio_g474.c:19:9:GPIO_GetPortIndex	13
+../Inc/HAL_STM32F103C6T6/src/ll/g474/gpio_g474.c:35:6:GPIO_PinMode	2
+../Inc/HAL_STM32F103C6T6/src/ll/g474/gpio_g474.c:61:6:GPIO_PinModeMulti	2
+../Inc/HAL_STM32F103C6T6/src/ll/g474/gpio_g474.c:66:6:GPIO_PinToggle	2
+../Inc/HAL_STM32F103C6T6/src/ll/g474/gpio_g474.c:75:6:GPIO_DigitalWrite	2
+../Inc/HAL_STM32F103C6T6/src/ll/g474/gpio_g474.c:83:9:GPIO_DigitalRead	1
