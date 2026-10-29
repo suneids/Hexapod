@@ -1,8 +1,0 @@
-../Inc/HAL_STM32F103C6T6/src/ll/g0/flash_ll_g0.c:21:12:flash_wait_ready	8	static
-../Inc/HAL_STM32F103C6T6/src/ll/g0/flash_ll_g0.c:41:13:flash_clear_flags	8	static
-../Inc/HAL_STM32F103C6T6/src/ll/g0/flash_ll_g0.c:53:5:flash_ll_unlock	8	static
-../Inc/HAL_STM32F103C6T6/src/ll/g0/flash_ll_g0.c:69:5:flash_ll_lock	8	static
-../Inc/HAL_STM32F103C6T6/src/ll/g0/flash_ll_g0.c:80:5:flash_ll_erase_page	40	static,ignoring_inline_asm
-../Inc/HAL_STM32F103C6T6/src/ll/g0/flash_ll_g0.c:161:5:flash_ll_program_doubleword	64	static,ignoring_inline_asm
-../Inc/HAL_STM32F103C6T6/src/ll/g0/flash_ll_g0.c:233:5:flash_ll_read_doubleword	56	static
-../Inc/HAL_STM32F103C6T6/src/ll/g0/flash_ll_g0.c:263:5:flash_ll_read_halfword	16	static
