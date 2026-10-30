@@ -43,3 +43,14 @@ Thumbs.db
 History/
 Project Logs for */
 __Previews/
+
+# Misc generated / backup files
+*.lnk
+*.FCBak
+*.blend1
+out.txt
+Makefile.Debug
+Makefile.Release
+
+# Altium generated outputs
+Project Outputs for */
