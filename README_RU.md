@@ -1,7 +1,7 @@
 <table>
   <tr>
-    <td><b>🇬🇧 English</b></td>
-    <td><a href="./README_RU.md">🇷🇺 Русский</a></td>
+    <td><a href="./README_RU.md">🇬🇧 English</a></td>
+    <td><b>🇷🇺 Русский</a></td>
   </tr>
 </table>
 
