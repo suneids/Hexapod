@@ -1,3 +1,10 @@
+<table>
+  <tr>
+    <td><b>🇬🇧 English</b></td>
+    <td><a href="./README_RU.md">🇷🇺 Русский</a></td>
+  </tr>
+</table>
+
 # 🕷️ Hexapod — Distributed 18-DOF Robotic Platform
 
 A six-legged robotic platform built around a distributed STM32 control architecture.
