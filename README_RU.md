@@ -1,6 +1,6 @@
 <table>
   <tr>
-    <td><a href="./README_RU.md">🇬🇧 English</a></td>
+    <td><a href="./README.md">🇬🇧 English</a></td>
     <td><b>🇷🇺 Русский</a></td>
   </tr>
 </table>
