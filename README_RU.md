@@ -1,4 +1,4 @@
-<table>
+<table align="right">
   <tr>
     <td><a href="./README.md">🇬🇧 English</a></td>
     <td><b>🇷🇺 Русский</b></td>
