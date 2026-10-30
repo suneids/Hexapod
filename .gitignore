@@ -35,3 +35,11 @@ qrc_*
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Qt Creator / clangd cache
+.qtc_clangd/
+
+# Altium generated files
+History/
+Project Logs for */
+__Previews/
