@@ -1,6 +1,7 @@
 #include "HAL_STM32F103C6T6/inc/mcu_config.h"
 #include "HAL_STM32F103C6T6/inc/tim.h"
 #include "HAL_STM32F103C6T6/inc/usart.h"
+#include "../Inc/HAL_STM32F103C6T6/inc/pwm.h"
 #include <stdint.h>
 #include <math.h>
 #include <stdbool.h>
@@ -9,8 +10,8 @@
 #define CONFIG_H
 
 
-#define COXA_MIN       -45
-#define COXA_MAX        45
+#define COXA_MIN       -35
+#define COXA_MAX        35
 
 #define COXA_FORWARD    25
 #define COXA_BACKWARD  -25
@@ -24,7 +25,7 @@
 #define GAIT_PHASE_TIME 250
 
 #define GAIT_UPDATE_TIME 30u
-#define STEP_HALF          45.0f   // стопа ходит от -35 до +35 мм
+#define STEP_HALF          35.0f   // стопа ходит от -35 до +35 мм
 #define STEP_HEIGHT        35.0f   // подъём стопы
 #define GAIT_HALF_TIME     500u    // мс на половину цикла
 #define LEG_WORK_RADIUS    100.0f
@@ -45,7 +46,10 @@
 #define MOVE_D         (1u << 3)
 #define MOVE_BASE      (1u << 4)
 
-
+#define LEG_MOTION_PERIOD_MS  10
+#define COXA_STEP_DEG         2.0f
+#define FEMUR_STEP_DEG        2.0f
+#define TIBIA_STEP_DEG        2.0f
 
 
 typedef struct {
@@ -108,6 +112,16 @@ extern const int8_t coxa_sign[6];
 extern const LegTransform_t home;
 extern LegTransform_t leg_pos[6];
 extern LegAngles_t leg_angles[6];
-extern GPIO_Pin_t brain_led;
+
+extern GPIO_Pin_t brain_led,
+				  leg1_coxa, leg1_femur, leg1_tibia,
+				  leg2_coxa, leg2_femur, leg2_tibia,
+				  leg3_coxa, leg3_femur, leg3_tibia,
+				  leg4_coxa, leg4_femur, leg4_tibia,
+				  leg5_coxa, leg5_femur, leg5_tibia,
+				  leg6_coxa, leg6_femur, leg6_tibia;
+extern GPIO_Pin_t *const legs_pins[6][3];
+extern LegTransform_t gait_start_pos[6];
+
 
 #endif

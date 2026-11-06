@@ -7,7 +7,8 @@ int main(void){
 	SPIDER_StepBase();
     while(7){
     	Control_Update();
-    	SPIDER_GaitUpdate();
+		SPIDER_GaitUpdate();
+		Leg_Motion_Update();
     	if(millis() - state_time > 200){
     		BRAIN_SendCurrentState();
     		state_time = millis();

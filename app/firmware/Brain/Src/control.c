@@ -222,7 +222,8 @@ void Control_Update(void){
 			break;
 		case MOVE_NONE:
 		default:
-			break;
+		    SPIDER_Stop();
+		    break;
 	}
 }
 

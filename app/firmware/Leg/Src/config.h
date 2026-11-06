@@ -53,5 +53,7 @@ extern LegMotion_t leg1;
 extern LegMotion_t leg2;
 
 extern GPIO_Pin_t coxa1, femur1, tibia1, coxa2, femur2, tibia2;
-
+void BRAIN_Init(void);
+void LEGS_Init(void);
+}
 #endif
