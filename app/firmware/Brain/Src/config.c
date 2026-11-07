@@ -53,11 +53,11 @@ GPIO_Pin_t leg1_coxa   = {.port  = GPIOB, .number = 9, .moder = GPIO_MODE_AF, .o
 
 GPIO_Pin_t *const legs_pins[6][3] = {
 		{ &leg1_coxa, &leg1_femur, &leg1_tibia },
-		{ &leg1_coxa, &leg1_femur, &leg1_tibia },
-		{ &leg1_coxa, &leg1_femur, &leg1_tibia },
-		{ &leg1_coxa, &leg1_femur, &leg1_tibia },
-		{ &leg1_coxa, &leg1_femur, &leg1_tibia },
-		{ &leg1_coxa, &leg1_femur, &leg1_tibia }
+		{ &leg2_coxa, &leg2_femur, &leg2_tibia },
+		{ &leg3_coxa, &leg3_femur, &leg3_tibia },
+		{ &leg4_coxa, &leg4_femur, &leg4_tibia },
+		{ &leg5_coxa, &leg5_femur, &leg5_tibia },
+		{ &leg6_coxa, &leg6_femur, &leg6_tibia }
 };
 const LegTransform_t home = {.x = 100, .y = 0, .z = 217.94 };
 LegTransform_t leg_pos[6] = {0};

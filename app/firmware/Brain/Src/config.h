@@ -51,7 +51,6 @@
 #define FEMUR_STEP_DEG        2.0f
 #define TIBIA_STEP_DEG        2.0f
 
-
 typedef struct {
     float coxa;
     float femur;

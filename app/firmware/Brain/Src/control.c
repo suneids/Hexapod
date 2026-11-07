@@ -1,5 +1,6 @@
 #include "control.h"
 #include "activities.h"
+#include "config.h"
 #include <string.h>
 #include "HAL_STM32F103C6T6/inc/usart.h"
 #include "HAL_STM32F103C6T6/inc/tim.h"
